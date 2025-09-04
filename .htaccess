@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Redirect index.php to root
+RewriteRule ^index\.php$ / [R=301,L]
+
+# Redirect any .php request to extensionless (except index)
+RewriteCond %{THE_REQUEST} \s/([^.\s?]+)\.php[\s?] [NC]
+RewriteCond %1 !index$ [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# Internally rewrite clean URLs to their PHP counterparts
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([A-Za-z0-9\-_]+)/?$ $1.php [L,QSA]
+
