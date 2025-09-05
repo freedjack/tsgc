@@ -1,23 +1,64 @@
 /* Google Fonts loaded via HTML <head> for better control */
 
-/* Root Variables */
+/* Theme System - CSS Custom Properties */
 :root {
-  /* Colors */
-  --primary-color: #000000;
-  --secondary-color: #EE4E4E;
-  --accent-color: #3185fc;
-  --text-color: rgb(14, 18, 18);
-  --background-color: #f8f9fa;
-  --card-background: #ffffff;
+  /* Default Theme - Modern Professional */
+  --theme-name: 'modern-professional';
   
-  /* Mobile Menu */
-  --mobile-menu-transition: 0.2s ease;
-  --mobile-menu-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Core Colors */
+  --primary-color: #1a1a1a;
+  --secondary-color: #ff6b6b;
+  --accent-color: #4ecdc4;
+  --tertiary-color: #45b7d1;
+  --quaternary-color: #96ceb4;
+  
+  /* Text Colors */
+  --text-primary: #2c3e50;
+  --text-secondary: #7f8c8d;
+  --text-muted: #95a5a6;
+  --text-inverse: #ffffff;
+  
+  /* Background Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #e9ecef;
+  --bg-accent: #f1f3f4;
+  --bg-overlay: rgba(0, 0, 0, 0.7);
+  
+  /* Card & Surface Colors */
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.08);
+  --surface-elevated: #ffffff;
+  --surface-hover: #f8f9fa;
+  
+  /* Interactive Colors */
+  --link-color: var(--accent-color);
+  --link-hover: var(--tertiary-color);
+  --button-primary: var(--accent-color);
+  --button-primary-hover: var(--tertiary-color);
+  --button-secondary: var(--bg-tertiary);
+  --button-secondary-hover: var(--text-secondary);
+  
+  /* Status Colors */
+  --success-color: #27ae60;
+  --warning-color: #f39c12;
+  --error-color: #e74c3c;
+  --info-color: var(--tertiary-color);
   
   /* Shadows & Effects */
-  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  --hover-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-  --hover-transition: transform 0.3s ease, box-shadow 0.3s ease;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.15);
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Mobile Menu */
+  --mobile-menu-transition: var(--transition-fast);
+  --mobile-menu-shadow: var(--shadow-md);
   
   /* Spacing */
   --spacing-unit: 1rem;
@@ -25,7 +66,6 @@
   --card-padding: 2.5rem;
   
   /* Typography */
-  --tertiary-color: #26408b;
   --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --font-secondary: 'Roboto Slab', Georgia, 'Times New Roman', serif;
   
@@ -36,15 +76,225 @@
   font-size: 1.2rem;
   
   /* Color Scheme */
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: light;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
 
   /* Font Rendering */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Theme: Ocean Breeze */
+[data-theme="ocean-breeze"] {
+  --theme-name: 'ocean-breeze';
+  --primary-color: #0f4c75;
+  --secondary-color: #3282b8;
+  --accent-color: #0f4c75;
+  --tertiary-color: #bbe1fa;
+  --quaternary-color: #71c9ce;
+  
+  --text-primary: #1e3a8a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-inverse: #ffffff;
+  
+  --bg-primary: #f0f9ff;
+  --bg-secondary: #e0f2fe;
+  --bg-tertiary: #bae6fd;
+  --bg-accent: #f0f9ff;
+  --bg-overlay: rgba(15, 76, 117, 0.8);
+  
+  --card-bg: #ffffff;
+  --card-border: rgba(15, 76, 117, 0.1);
+  --surface-elevated: #ffffff;
+  --surface-hover: #f0f9ff;
+  
+  --link-color: var(--secondary-color);
+  --link-hover: var(--primary-color);
+  --button-primary: var(--secondary-color);
+  --button-primary-hover: var(--primary-color);
+  --button-secondary: var(--bg-tertiary);
+  --button-secondary-hover: var(--text-primary);
+  
+  --success-color: #059669;
+  --warning-color: #d97706;
+  --error-color: #dc2626;
+  --info-color: var(--secondary-color);
+  
+  color-scheme: light;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
+
+/* Theme: Sunset Vibes */
+[data-theme="sunset-vibes"] {
+  --theme-name: 'sunset-vibes';
+  --primary-color: #7c2d12;
+  --secondary-color: #ea580c;
+  --accent-color: #f97316;
+  --tertiary-color: #fb923c;
+  --quaternary-color: #fed7aa;
+  
+  --text-primary: #431407;
+  --text-secondary: #9a3412;
+  --text-muted: #c2410c;
+  --text-inverse: #ffffff;
+  
+  --bg-primary: #fff7ed;
+  --bg-secondary: #ffedd5;
+  --bg-tertiary: #fed7aa;
+  --bg-accent: #fff7ed;
+  --bg-overlay: rgba(124, 45, 18, 0.8);
+  
+  --card-bg: #ffffff;
+  --card-border: rgba(249, 115, 22, 0.1);
+  --surface-elevated: #ffffff;
+  --surface-hover: #fff7ed;
+  
+  --link-color: var(--accent-color);
+  --link-hover: var(--primary-color);
+  --button-primary: var(--accent-color);
+  --button-primary-hover: var(--primary-color);
+  --button-secondary: var(--bg-tertiary);
+  --button-secondary-hover: var(--text-primary);
+  
+  --success-color: #16a34a;
+  --warning-color: #ca8a04;
+  --error-color: #dc2626;
+  --info-color: var(--accent-color);
+  
+  color-scheme: light;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
+
+/* Theme: Forest Fresh */
+[data-theme="forest-fresh"] {
+  --theme-name: 'forest-fresh';
+  --primary-color: #14532d;
+  --secondary-color: #16a34a;
+  --accent-color: #22c55e;
+  --tertiary-color: #4ade80;
+  --quaternary-color: #86efac;
+  
+  --text-primary: #052e16;
+  --text-secondary: #166534;
+  --text-muted: #16a34a;
+  --text-inverse: #ffffff;
+  
+  --bg-primary: #f0fdf4;
+  --bg-secondary: #dcfce7;
+  --bg-tertiary: #bbf7d0;
+  --bg-accent: #f0fdf4;
+  --bg-overlay: rgba(20, 83, 45, 0.8);
+  
+  --card-bg: #ffffff;
+  --card-border: rgba(34, 197, 94, 0.1);
+  --surface-elevated: #ffffff;
+  --surface-hover: #f0fdf4;
+  
+  --link-color: var(--accent-color);
+  --link-hover: var(--primary-color);
+  --button-primary: var(--accent-color);
+  --button-primary-hover: var(--primary-color);
+  --button-secondary: var(--bg-tertiary);
+  --button-secondary-hover: var(--text-primary);
+  
+  --success-color: #15803d;
+  --warning-color: #d97706;
+  --error-color: #dc2626;
+  --info-color: var(--accent-color);
+  
+  color-scheme: light;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
+
+/* Theme: Purple Dreams */
+[data-theme="purple-dreams"] {
+  --theme-name: 'purple-dreams';
+  --primary-color: #581c87;
+  --secondary-color: #7c3aed;
+  --accent-color: #a855f7;
+  --tertiary-color: #c084fc;
+  --quaternary-color: #ddd6fe;
+  
+  --text-primary: #3b0764;
+  --text-secondary: #6b21a8;
+  --text-muted: #7c3aed;
+  --text-inverse: #ffffff;
+  
+  --bg-primary: #faf5ff;
+  --bg-secondary: #f3e8ff;
+  --bg-tertiary: #e9d5ff;
+  --bg-accent: #faf5ff;
+  --bg-overlay: rgba(88, 28, 135, 0.8);
+  
+  --card-bg: #ffffff;
+  --card-border: rgba(168, 85, 247, 0.1);
+  --surface-elevated: #ffffff;
+  --surface-hover: #faf5ff;
+  
+  --link-color: var(--accent-color);
+  --link-hover: var(--primary-color);
+  --button-primary: var(--accent-color);
+  --button-primary-hover: var(--primary-color);
+  --button-secondary: var(--bg-tertiary);
+  --button-secondary-hover: var(--text-primary);
+  
+  --success-color: #16a34a;
+  --warning-color: #d97706;
+  --error-color: #dc2626;
+  --info-color: var(--accent-color);
+  
+  color-scheme: light;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
+
+/* Theme: Midnight Elegance */
+[data-theme="midnight-elegance"] {
+  --theme-name: 'midnight-elegance';
+  --primary-color: #0f172a;
+  --secondary-color: #1e293b;
+  --accent-color: #3b82f6;
+  --tertiary-color: #60a5fa;
+  --quaternary-color: #93c5fd;
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-inverse: #0f172a;
+  
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --bg-accent: #1e293b;
+  --bg-overlay: rgba(0, 0, 0, 0.8);
+  
+  --card-bg: #1e293b;
+  --card-border: rgba(59, 130, 246, 0.2);
+  --surface-elevated: #334155;
+  --surface-hover: #475569;
+  
+  --link-color: var(--accent-color);
+  --link-hover: var(--tertiary-color);
+  --button-primary: var(--accent-color);
+  --button-primary-hover: var(--tertiary-color);
+  --button-secondary: var(--bg-tertiary);
+  --button-secondary-hover: var(--text-primary);
+  
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --info-color: var(--accent-color);
+  
+  color-scheme: dark;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
 }
 
 /* Base Element Styles */
@@ -71,11 +321,12 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
-  background: var(--background-color);
-  color: var(--text-color);
+  background: var(--bg-primary);
+  color: var(--text-primary);
   font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
 /* Accessibility */
@@ -114,6 +365,7 @@ h1 {
   letter-spacing: -0.03em;
   line-height: 1.1;
   font-family: var(--font-secondary);
+  transition: color var(--transition-normal);
 }
 
 h2 {
@@ -125,22 +377,26 @@ h2 {
   text-decoration: none;
   letter-spacing: -0.02em;
   line-height: 1.6;
+  transition: color var(--transition-normal);
 }
 
 h3 {
   font-size: 1rem;
   letter-spacing: -0.01em;
   margin-top: 0.5rem;
+  color: var(--text-primary);
+  transition: color var(--transition-normal);
 }
 
 a {
   font-weight: 500;
-  color: var(--accent-color);
+  color: var(--link-color);
   text-decoration: none;
+  transition: color var(--transition-normal);
 }
 
 a:hover {
-  color: var(--tertiary-color);
+  color: var(--link-hover);
 }
 
 button {
@@ -150,18 +406,21 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--button-primary);
+  color: var(--text-inverse);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all var(--transition-normal);
 }
 
 button:hover {
-  border-color: #646cff;
+  background-color: var(--button-primary-hover);
+  transform: translateY(-1px);
 }
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
 }
 
 .primary-bg {
@@ -175,10 +434,10 @@ button:focus-visible {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: #ffffff;
-  transition: all 0.3s ease;
-  border-bottom: 1px solid transparent;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background: var(--surface-elevated);
+  transition: all var(--transition-normal);
+  border-bottom: 1px solid var(--card-border);
+  box-shadow: var(--shadow-sm);
 }
 
 .header-content {
@@ -218,7 +477,7 @@ button:focus-visible {
 .hamburger-line {
   width: 25px;
   height: 3px;
-  background-color: var(--primary-color);
+  background-color: var(--text-primary);
   transition: all var(--mobile-menu-transition);
 }
 
@@ -259,7 +518,7 @@ button:focus-visible {
 }
 
 .nav-list a {
-  color: var(--primary-color);
+  color: var(--text-primary);
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 0;
@@ -267,7 +526,7 @@ button:focus-visible {
   font-weight: 500;
   position: relative;
   letter-spacing: -0.01em;
-  transition: color 0.3s ease;
+  transition: color var(--transition-normal);
 }
 
 .nav-list a::after {
@@ -278,7 +537,7 @@ button:focus-visible {
   width: 0;
   height: 2px;
   background: var(--accent-color);
-  transition: width 0.3s ease;
+  transition: width var(--transition-normal);
 }
 
 .nav-list a:hover::after,
@@ -403,13 +662,13 @@ button:focus-visible {
 }
 
 .content-card {
-  background: var(--card-background);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   padding: 0 var(--card-padding) var(--card-padding) var(--card-padding);
   text-decoration: none;
-  color: var(--text-color);
-  transition: var(--hover-transition);
-  box-shadow: var(--card-shadow);
+  color: var(--text-primary);
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-md);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -460,7 +719,7 @@ button:focus-visible {
 
 .content-card:hover {
   transform: translateY(-8px);
-  box-shadow: var(--hover-shadow);
+  box-shadow: var(--shadow-lg);
 }
 
 .underline-text {
@@ -484,8 +743,8 @@ button:focus-visible {
 
 /* Button Styles */
 .cta-button {
-  background-color: var(--accent-color);
-  color: white;
+  background-color: var(--button-primary);
+  color: var(--text-inverse);
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -496,12 +755,14 @@ button:focus-visible {
   margin-top: 1rem;
   text-decoration: none;
   display: inline-block;
-  transition: background-color 0.3s ease;
+  transition: all var(--transition-normal);
 }
 
 .cta-button:hover {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: var(--button-primary-hover);
+  color: var(--text-inverse);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .dt-l-m {
@@ -545,22 +806,23 @@ button:focus-visible {
 }
 
 .view-all-link {
-  color: var(--accent-color);
+  color: var(--link-color);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color var(--transition-normal);
   white-space: nowrap;
 }
 
 .view-all-link:hover {
-  color: var(--primary-color);
+  color: var(--link-hover);
 }
 
 /* Footer Styles */
 .site-footer {
-  background-color: #1a1a1a;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--text-inverse);
   padding: 4rem 0 0;
   margin-top: 4rem;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
 .footer-content {
@@ -589,9 +851,9 @@ button:focus-visible {
 }
 
 .footer-section a {
-  color: #fff;
+  color: var(--text-inverse);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color var(--transition-normal);
 }
 
 .footer-section a:hover {
@@ -602,16 +864,18 @@ button:focus-visible {
   display: inline-block;
   padding: 0.8rem 1.5rem;
   background-color: var(--accent-color);
-  color: #fff;
+  color: var(--text-inverse);
   text-decoration: none;
   border-radius: 4px;
   margin-top: 1rem;
-  transition: background-color 0.3s ease;
+  transition: all var(--transition-normal);
 }
 
 .footer-cta:hover {
-  background-color: var(--primary-color);
-  color: #fff;
+  background-color: var(--button-primary-hover);
+  color: var(--text-inverse);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .footer-bottom {
@@ -774,11 +1038,145 @@ button:focus-visible {
   }
 }
 
+/* Theme Switcher Styles */
+.theme-switcher {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 1001;
+  background: var(--surface-elevated);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal);
+}
+
+.theme-switcher:hover {
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: var(--shadow-xl);
+}
+
+.theme-switcher h4 {
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  text-align: center;
+  font-weight: 600;
+}
+
+.theme-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.theme-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 2px solid transparent;
+}
+
+.theme-option:hover {
+  background: var(--surface-hover);
+  transform: translateX(2px);
+}
+
+.theme-option.active {
+  border-color: var(--accent-color);
+  background: var(--bg-accent);
+}
+
+.theme-preview {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--card-border);
+  transition: all var(--transition-fast);
+}
+
+.theme-option.active .theme-preview {
+  border-color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.theme-name {
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Theme-specific preview colors */
+.theme-preview[data-theme="modern-professional"] {
+  background: linear-gradient(45deg, #1a1a1a 0%, #4ecdc4 50%, #ff6b6b 100%);
+}
+
+.theme-preview[data-theme="ocean-breeze"] {
+  background: linear-gradient(45deg, #0f4c75 0%, #3282b8 50%, #bbe1fa 100%);
+}
+
+.theme-preview[data-theme="sunset-vibes"] {
+  background: linear-gradient(45deg, #7c2d12 0%, #ea580c 50%, #f97316 100%);
+}
+
+.theme-preview[data-theme="forest-fresh"] {
+  background: linear-gradient(45deg, #14532d 0%, #16a34a 50%, #22c55e 100%);
+}
+
+.theme-preview[data-theme="purple-dreams"] {
+  background: linear-gradient(45deg, #581c87 0%, #7c3aed 50%, #a855f7 100%);
+}
+
+.theme-preview[data-theme="midnight-elegance"] {
+  background: linear-gradient(45deg, #0f172a 0%, #1e293b 50%, #3b82f6 100%);
+}
+
+/* Mobile theme switcher */
+@media (max-width: 768px) {
+  .theme-switcher {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    top: auto;
+    transform: none;
+    padding: 0.75rem;
+  }
+  
+  .theme-switcher h4 {
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .theme-options {
+    gap: 0.25rem;
+  }
+  
+  .theme-option {
+    padding: 0.4rem;
+  }
+  
+  .theme-preview {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .theme-name {
+    font-size: 0.7rem;
+  }
+}
+
 /* Print styles */
 @media print {
   .site-header,
   .site-footer,
-  .mobile-menu-toggle {
+  .mobile-menu-toggle,
+  .theme-switcher {
     display: none;
   }
   
