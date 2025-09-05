@@ -1,5 +1,4 @@
 <?php
-require_once 'config.php';
 
 // Get content for this specific training program
 $content = getContentById('the-situation-room');

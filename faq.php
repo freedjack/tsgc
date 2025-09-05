@@ -1,8 +1,7 @@
 <?php
-require_once 'config.php';
 
 // SEO
-$page_title = 'FAQ | ' . SITE_NAME;
+$page_title = 'FAQ';
 $page_description = 'Answers to common questions about our immersive training, logistics, and how we work.';
 
 include 'includes/header.php';

@@ -1,5 +1,4 @@
 <?php
-require_once 'config.php';
 
 // Simple form processing - in production you'd want more robust validation and email sending
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

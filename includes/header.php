@@ -1,5 +1,9 @@
 <?php
+
 require_once 'config.php';
+
+// Site name constant
+define('SITE_NAME', 'The Serious Games Company');
 
 // Get current page info for SEO
 $current_page = basename($_SERVER['PHP_SELF'], '.php');
@@ -22,25 +26,16 @@ $canonical_url = isset($canonical_url) ? $canonical_url : rtrim(SITE_URL, '/') .
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <!-- SEO Meta Tags -->
-    <title><?php echo htmlspecialchars($page_title); ?></title>
-    <meta name="description" content="<?php echo htmlspecialchars($page_description); ?>">
-    <link rel="canonical" href="<?php echo htmlspecialchars($canonical_url); ?>">
+    <?php
+    // Set page variables for SEO include
+    $pageTitle = $page_title;
+    $pageDescription = $page_description;
+    $canonicalUrl = $canonical_url;
+    $ogImage = SITE_URL . '/assets/images/large/OnPodium.jpg';
+    include __DIR__ . '/seo.php';
+    ?>
+    
     <meta name="theme-color" content="#ffffff">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="<?php echo htmlspecialchars($page_title); ?>">
-    <meta property="og:description" content="<?php echo htmlspecialchars($page_description); ?>">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="<?php echo htmlspecialchars($canonical_url); ?>">
-    <meta property="og:image" content="<?php echo SITE_URL; ?>/assets/images/large/OnPodium.jpg">
-    <meta property="og:image:alt" content="The Serious Games Company">
-    <meta property="og:site_name" content="<?php echo SITE_NAME; ?>">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="<?php echo htmlspecialchars($page_title); ?>">
-    <meta name="twitter:description" content="<?php echo htmlspecialchars($page_description); ?>">
-    <meta name="twitter:image" content="<?php echo SITE_URL; ?>/assets/images/large/OnPodium.jpg">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
@@ -61,18 +56,8 @@ $canonical_url = isset($canonical_url) ? $canonical_url : rtrim(SITE_URL, '/') .
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/assets/css/style.css">
     
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "<?php echo SITE_NAME; ?>",
-        "url": "<?php echo SITE_URL; ?>",
-        "logo": "<?php echo SITE_URL; ?>/assets/images/tsgc_logo.png",
-        "description": "<?php echo SITE_DESCRIPTION; ?>",
-        "sameAs": ["<?php echo SITE_URL; ?>"]
-    }
-    </script>
+    <!-- Analytics -->
+    <?php include __DIR__ . '/analytics.php'; ?>
 </head>
 <body>
     <!-- Skip to main content link for accessibility -->

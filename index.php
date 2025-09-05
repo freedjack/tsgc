@@ -1,16 +1,15 @@
 <?php
-require_once 'config.php';
 
 // SEO settings for homepage
-$page_title = SITE_NAME . ' | Immersive Role Play and Training';
+$page_title = ' | Immersive Role Play and Training';
 $page_description = 'The Serious Games Company creates engaging, immersive role play, simulations and games for effective learning and skill development in corporate environments.';
 $page_keywords = 'serious games, role play, simulations, training, immersive learning, corporate training, team building, learning by being';
-$canonical_url = SITE_URL;
+
+include 'includes/header.php';
 
 // Get front page training items
 $front_page_training = getFrontPageTraining();
 
-include 'includes/header.php';
 ?>
 
 <!-- Hero Section -->

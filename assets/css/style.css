@@ -83,8 +83,7 @@ body {
   position: absolute;
   top: -40px;
   left: 6px;
-  background: var(--accent-color);
-  color: white;
+
   padding: 8px;
   text-decoration: none;
   border-radius: 4px;
@@ -381,6 +380,7 @@ button:focus-visible {
   gap: 2rem;
   width: 100%;
   margin-bottom: 2rem;
+  align-items: stretch;
 }
 
 .module-grid {
@@ -412,6 +412,23 @@ button:focus-visible {
   box-shadow: var(--card-shadow);
   display: flex;
   flex-direction: column;
+  height: 100%;
+}
+
+.content-card:not(.image-card) img {
+  flex-shrink: 0;
+}
+
+.content-card:not(.image-card) .outcomes {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0rem;
+}
+
+.content-card:not(.image-card) .outcomes p:last-child {
+  margin-top: auto;
+  margin-bottom: 0;
 }
 
 .image-card {
@@ -419,13 +436,15 @@ button:focus-visible {
 }
 
 .content-card-content {
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 1rem 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .content-card img {
   width: 100%;
-  height: auto;
-  max-height: 240px;
+  height: 240px;
   object-fit: cover;
   border-radius: 4px;
 }
@@ -457,6 +476,10 @@ button:focus-visible {
 
 .outcomes h4 {
   margin: 0;
+}
+
+.flex-spacer {
+  flex-grow: 1;
 }
 
 /* Button Styles */

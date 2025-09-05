@@ -1,5 +1,4 @@
 <?php
-require_once 'config.php';
 
 // SEO settings for contact page
 $page_title = 'Contact Us | ' . SITE_NAME;

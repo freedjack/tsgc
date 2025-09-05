@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Serious Games Company - Homepage Redesign</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+    }
+    header nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+    }
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 0 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin-bottom: 2rem;
+    }
+    .btn-primary {
+      background: #0077ff;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1.5rem;
+    }
+    .card-content h3 {
+      margin-top: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    footer {
+      background: #111;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">The Serious Games Company</div>
+    <nav>
+      <a href="#training">Training</a>
+      <a href="#insights">Insights</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Learning by Being</h1>
+    <p>Unlock your team's potential through immersive role play, simulations, and games designed to inspire growth, creativity, and adaptability.</p>
+    <a href="#training" class="btn-primary">Explore Training Scenarios</a>
+  </section>
+
+  <section id="about">
+    <h2>What We’re About</h2>
+    <p>We transform traditional training into unforgettable experiences. Through live role play and immersive simulations, we help teams build stronger communication, sharpen skills, and unlock hidden potential.</p>
+  </section>
+
+  <section id="benefits">
+    <h2>Why Work With Us?</h2>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-content">
+          <h3>Team Growth</h3>
+          <p>Develop resilience, communication, and problem-solving in a fun and engaging way.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>Immersive Training</h3>
+          <p>Step into scenarios that mirror real-world challenges, helping teams adapt and thrive.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>Unforgettable Impact</h3>
+          <p>Our training sticks. Teams leave with not just new skills, but experiences they’ll remember.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="training">
+    <h2>Explore Our Training Scenarios</h2>
+    <div class="grid-3">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1515165562835-c3b8e387c3a6?auto=format&fit=crop&w=800&q=80" alt="Live TV scenario">
+        <div class="card-content">
+          <h3>Live in the Morning</h3>
+          <p>Fast-paced challenges where teamwork and adaptability are key.</p>
+          <a href="#" class="btn-primary">Find out more</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?auto=format&fit=crop&w=800&q=80" alt="Covert operations">
+        <div class="card-content">
+          <h3>Covert Operations</h3>
+          <p>Learn the skills of a spy and how to use them to save the world.</p>
+          <a href="#" class="btn-primary">Find out more</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?auto=format&fit=crop&w=800&q=80" alt="Crisis room">
+        <div class="card-content">
+          <h3>The Situation Room</h3>
+          <p>Step into crisis simulations and sharpen decision-making under pressure.</p>
+          <a href="#" class="btn-primary">Find out more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Ready to Transform Your Training?</h2>
+    <p>Let’s build something unforgettable together. Get in touch today.</p>
+    <a href="#" class="btn-primary">Get in Touch</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 The Serious Games Company. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,8 +1,7 @@
 <?php
-require_once 'config.php';
 
 // SEO settings for training page
-$page_title = 'Training Programs | ' . SITE_NAME;
+$page_title = 'Training Programs | ';
 $page_description = 'Explore our immersive training programs including cyber security, live TV production, covert operations, and crisis management scenarios.';
 $page_keywords = 'training programs, cyber security training, live TV training, covert operations, crisis management, immersive learning';
 // Let header compute canonical based on request URI

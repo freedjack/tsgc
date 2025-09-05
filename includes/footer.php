@@ -11,11 +11,11 @@
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="training.php">Training</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                    <li><a href="faq.php">FAQ</a></li>
-                    <li><a href="knowledge.php">Insights & Knowledge</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/training">Training</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/knowledge">Insights & Knowledge</a></li>
                 </ul>
             </div>
             
@@ -45,6 +45,7 @@
     <!-- JavaScript -->
     <script src="/assets/js/main.js" defer></script>
     
-    <!-- Additional structured data for footer removed (no on-site search) -->
+    <!-- Analytics (also in header, but footer ensures it loads) -->
+    <?php include __DIR__ . '/analytics.php'; ?>
 </body>
 </html>

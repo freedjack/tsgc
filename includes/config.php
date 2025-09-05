@@ -1,8 +1,11 @@
 <?php
 // Site Configuration
-define('SITE_NAME', 'The Serious Games Company');
 define('SITE_URL', 'https://theseriousgamescompany.com');
 define('SITE_DESCRIPTION', 'The Serious Games Company creates engaging, immersive role play, simulations and games for effective learning and skill development in corporate environments.');
+
+// Analytics and Forms
+define('GA4_MEASUREMENT_ID', ''); // Add your GA4 Measurement ID here
+define('WEB3FORMS_ACCESS_KEY', ''); // Add your Web3Forms access key here
 
 // Content data (moved from JSON to PHP for easier management)
 $content_items = [
