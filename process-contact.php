@@ -1,34 +1,11 @@
 <?php
 
+require_once __DIR__ . '/includes/functions.php';
+
 // Simple form processing - in production you'd want more robust validation and email sending
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Basic validation
-    $name = trim($_POST['name'] ?? '');
-    $email = trim($_POST['email'] ?? '');
-    $company = trim($_POST['company'] ?? '');
-    $phone = trim($_POST['phone'] ?? '');
-    $training_interest = trim($_POST['training_interest'] ?? '');
-    $participants = trim($_POST['participants'] ?? '');
-    $message = trim($_POST['message'] ?? '');
-    $preferred_contact = $_POST['preferred_contact'] ?? 'email';
-    $newsletter = isset($_POST['newsletter']) ? 'Yes' : 'No';
-    
-    $errors = [];
-    
-    // Validate required fields
-    if (empty($name)) {
-        $errors[] = 'Name is required';
-    }
-    
-    if (empty($email)) {
-        $errors[] = 'Email is required';
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors[] = 'Please enter a valid email address';
-    }
-    
-    if (empty($message)) {
-        $errors[] = 'Message is required';
-    }
+    // Validate form using extracted function
+    [$errors, $fields] = validate_contact_form($_POST);
     
     if (empty($errors)) {
         // In a real application, you would:

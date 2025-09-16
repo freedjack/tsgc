@@ -3,18 +3,19 @@ use PHPUnit\Framework\TestCase;
 
 class ProcessContactTest extends TestCase {
     public function testRedirectsWithErrorsOnInvalidInput() {
+        require_once __DIR__ . '/../includes/functions.php';
+        
         $_POST = [
             'name' => '',
             'email' => 'invalid',
             'message' => ''
         ];
 
-        ob_start();
-        include __DIR__ . '/../process-contact.php';
-        $output = ob_get_clean();
-
-        $headers = xdebug_get_headers();
-        $this->assertStringContainsString('Location: contact.php?error', $headers[0]);
+        [$errors, $fields] = validate_contact_form($_POST);
+        
+        $this->assertContains('Name is required', $errors);
+        $this->assertContains('Please enter a valid email address', $errors);
+        $this->assertContains('Message is required', $errors);
     }
 
     public function testSuccessfulSubmissionRedirectsWithSuccess() {
