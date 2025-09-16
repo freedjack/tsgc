@@ -1,0 +1,17 @@
+{
+  "name": "tsgc-music-website",
+  "version": "1.0.0",
+  "description": "TSGC Music Website with BrowserSync for development",
+  "main": "index.js",
+  "scripts": {
+    "dev": "browser-sync start --config bs-config.js",
+    "start": "npm run dev",
+    "optimize-images": "node optimize-images.js"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3"
+  },
+  "keywords": ["php", "website", "browsersync", "development"],
+  "author": "",
+  "license": "ISC"
+}
