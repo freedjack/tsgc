@@ -8,7 +8,7 @@ include 'includes/header.php';
 ?>
 
 <?php 
-$hero_image = 'assets/images/large/room-with-tables.jpg';
+$hero_image = 'assets/images/optimized/large/jpg/room-with-tables.jpg';
 $hero_title = 'Frequently Asked Questions';
 $hero_subtitle = 'Everything you need to know about our training';
 include 'includes/hero.php';
@@ -46,7 +46,7 @@ include 'includes/hero.php';
 <div class="content-card container">
     <div class="text-content" style="text-align:center;">
         <h2>Still have questions?</h2>
-        <p><a class="cta-button" href="contact.php">Contact us</a></p>
+        <p><a class="cta-button" href="/contact">Contact us</a></p>
     </div>
     
 </div>

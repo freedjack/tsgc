@@ -1,7 +1,7 @@
 <?php
 
 // SEO settings for contact page
-$page_title = 'Contact Us | ' . SITE_NAME;
+$page_title = 'Contact Us';
 $page_description = 'Get in touch with The Serious Games Company to discuss your training needs. We\'re here to help transform your team\'s learning experience.';
 $page_keywords = 'contact, training inquiry, serious games contact, corporate training consultation';
 // Let header compute canonical based on request URI
@@ -11,7 +11,7 @@ include 'includes/header.php';
 
 <!-- Hero Section -->
 <?php 
-$hero_image = 'assets/images/large/andrey-metelev-games.jpg';
+$hero_image = 'assets/images/optimized/large/jpg/andrey-metelev-games.jpg';
 $hero_title = 'Get in Touch';
 $hero_subtitle = "Ready to transform your team's training experience?";
 include 'includes/hero.php';
@@ -46,33 +46,6 @@ include 'includes/hero.php';
                     <label for="phone">Phone</label>
                     <input type="tel" id="phone" name="phone" aria-describedby="phone-help">
                     <div id="phone-help" class="help-text">Best number to reach you (optional)</div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="training_interest">Training Interest</label>
-                    <select id="training_interest" name="training_interest" aria-describedby="training-help">
-                        <option value="">Select an option</option>
-                        <option value="the-hack">The Hack - Cyber Security</option>
-                        <option value="live-in-the-morning">Live in the Morning - TV Production</option>
-                        <option value="covert-operations">Covert Operations Academy</option>
-                        <option value="situation-room">The Situation Room - Crisis Management</option>
-                        <option value="bespoke">Bespoke Training Solution</option>
-                        <option value="general">General Inquiry</option>
-                    </select>
-                    <div id="training-help" class="help-text">Which training program interests you?</div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="participants">Number of Participants</label>
-                    <select id="participants" name="participants" aria-describedby="participants-help">
-                        <option value="">Select an option</option>
-                        <option value="1-10">1-10 people</option>
-                        <option value="11-25">11-25 people</option>
-                        <option value="26-50">26-50 people</option>
-                        <option value="51-100">51-100 people</option>
-                        <option value="100+">100+ people</option>
-                    </select>
-                    <div id="participants-help" class="help-text">Approximate number of participants</div>
                 </div>
                 
                 <div class="form-group">

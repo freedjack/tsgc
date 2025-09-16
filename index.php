@@ -14,9 +14,9 @@ $front_page_training = getFrontPageTraining();
 
 <!-- Hero Section -->
 <?php 
-$hero_image = 'assets/images/thumb/insta crowd.jpg';
-$hero_title = 'Learning by being';
-$hero_subtitle = "Using role play, simulations and games to unlock your team's potential....";
+$hero_image = 'assets/images/optimized/thumb/jpg/insta-crowd.jpg';
+$hero_title = 'Smart Play';
+$hero_subtitle = "Using role play, simulations and games to get serious results.";
 include 'includes/hero.php';
 ?>
 
@@ -51,8 +51,9 @@ include 'includes/hero.php';
 <!-- Contact Us Section -->
 <div class="container">
     <div class="content-grid">
-        <div class="content-card">
-            <?php render_picture('assets/images/large/SGmeditationLIVE AND LET DINE JUNE 2024_The Celtic Manor_PB-30.jpg', 'People meditating in a training session', '', [ 'sizes' => '(min-width: 968px) 600px, 100vw' ]); ?>
+        <div class="content-card image-card">
+            <?php render_picture('assets/images/optimized/large/jpg/sg-meditation-live-and-let-dine-june-2024-celtic-manor-pb-30.jpg', 'People meditating in a training session', '', [ 'sizes' => '(min-width: 968px) 600px, 100vw' ]); ?>
+            <div class="content-card-content">
             <h2>You should contact us if you want to</h2>
             <ul>
                 <li>Develop mindsets, not just skills—because growth should be exciting</li>
@@ -68,10 +69,12 @@ include 'includes/hero.php';
             <div>
                 <a href="contact.php" class="cta-button" style="width: 90%; display: block; text-align: center;">Get in touch</a>
             </div>
+            </div>
         </div>
         
-        <div class="content-card">
-            <?php render_picture('assets/images/large/LaughLIVE AND LET DINE JUNE 2024_The Celtic Manor_PB-25.jpg', 'People laughing during a training session', '', [ 'sizes' => '(min-width: 968px) 600px, 100vw' ]); ?>
+        <div class="content-card image-card">
+            <?php render_picture('assets/images/optimized/large/jpg/laugh-live-and-let-dine-june-2024-celtic-manor-pb-25.jpg', 'People laughing during a training session', '', [ 'sizes' => '(min-width: 968px) 600px, 100vw' ]); ?>
+            <div class="content-card-content">
             <h2>We're probably not for you if..</h2>
             <ul>
                 <li>You want a powerpoint presentation</li>
@@ -84,6 +87,7 @@ include 'includes/hero.php';
             <a href="https://www.microsoft.com/en-us/learning/default.aspx" target="_blank" rel="noopener noreferrer">
                 Go to Microsoft Learning
             </a>
+            </div>
         </div>
     </div>
 </div>
@@ -114,7 +118,7 @@ include 'includes/hero.php';
                 <?php endif; ?>
                 
                 <div class="content-card-content">
-                    <h2><?php echo htmlspecialchars($item['title']); ?></h2>
+                    <h2><a href="<?php echo htmlspecialchars($item['id']); ?>"><?php echo htmlspecialchars($item['title']); ?></a></h2>
                     <h3><?php echo htmlspecialchars($item['subtitle']); ?></h3>
                     
                     <?php if (isset($item['outcomes']) && !empty($item['outcomes'])): ?>
@@ -127,7 +131,7 @@ include 'includes/hero.php';
                     <?php endif; ?>
                     
                     <div class="flex-spacer"></div>
-                    <a href="<?php echo htmlspecialchars($item['id']); ?>.php" class="cta-button">
+                    <a href="<?php echo htmlspecialchars($item['id']); ?>" class="cta-button">
                         Find out more
                     </a>
                 </div>
@@ -136,40 +140,48 @@ include 'includes/hero.php';
     </div>
     
     <div class="content-grid">
-        <div class="content-card">
-            <h2>Bespoke training scenarios</h2>
-            <h3>Because no two organisations are the same</h3>
-            <?php render_picture('assets/images/large/SCIENTISTS.jpg', 'Scientists walking in a row', '', [ 'sizes' => '(min-width: 968px) 600px, 100vw' ]); ?>
-            <div class="outcomes">
-                <p>Work with us to construct and curate training scenarios that are tailored to your organisation and your needs.</p>
-                <h4>Partner with us..?</h4>
-                <p>You've made it this far, perhaps you would like to help us develop our latest training scenario?</p>
-                <p><a href="contact.php" class="cta-button">Find out more</a></p>
+        <div class="content-card image-card">
+            <div class="content-card-content">
+                <h2>Bespoke training scenarios</h2>
+                <h3>Because no two organisations are the same</h3>
+                <?php render_picture('assets/images/optimized/large/jpg/SCIENTISTS.jpg', 'Scientists walking in a row', '', [ 'sizes' => '(min-width: 968px) 600px, 100vw' ]); ?>
+                <div class="content-card-content">
+                    <div class="outcomes">
+                        <p>Work with us to construct and curate training scenarios that are tailored to your organisation and your needs.</p>
+                        <h4>Partner with us..?</h4>
+                        <p>You've made it this far, perhaps you would like to help us develop our latest training scenario?</p>
+                        <p><a href="contact.php" class="cta-button">Find out more</a></p>
+                    </div>
+                </div>
             </div>
         </div>
         
-        <div class="content-card">
+        <div class="content-card image-card">
+            <div class="content-card-content">
             <h2>What else can we do?</h2>
             <h3>It's more than just training</h3>
-            <?php render_picture('assets/images/thumb/OwenLIVE AND LET DINE.jpg', 'A man wearing a red hat with a microphone', '', [ 'sizes' => '(min-width: 968px) 400px, 100vw' ]); ?>
+            <?php render_picture('assets/images/optimized/thumb/jpg/owen-live-and-let-dine.jpg', 'A man wearing a red hat with a microphone', '', [ 'sizes' => '(min-width: 968px) 400px, 100vw' ]); ?>
+            <div class="content-card-content">
             <div class="outcomes">
                 <p>Role play, simulations and games are great for learning new skills and behaviours</p>
                 <p>But they can also be used to improve existing skills and behaviours as well as building confidence and social skills.</p>
                 <h4>We can help you with</h4>
-                <div>Negotiating awkwardness</div>
-                <div>Neurodiversity Strategies</div>
-                <div>Wellbeing and resilience</div>
-                <div>Communication</div>
-                <div>Leadership</div>
-                <div>Problem solving</div>
-                <div>Critical thinking</div>
-                <div>Imagination</div>
-                <div>Empathy</div>
-                <div>Creativity</div>
-                <div>Playfulness</div>
-                <div>Collaboration</div>
-                <div>Resilience</div>
-                <div>Adaptability</div>
+                <ul>
+                    <li>➜ Emotional Intelligence</li>
+                    <li>➜ Neurodiversity Strategies</li>
+                    <li>➜ Wellbeing and resilience</li>
+                    <li>➜ Communication</li>
+                    <li>➜ Leadership</li>
+                    <li>➜ Problem solving</li>
+                    <li>➜ Critical thinking</li>
+                    <li>➜ Imagination</li>
+                    <li>➜ Empathy</li>
+                    <li>➜ Creativity</li>
+                    <li>➜ Level up your pitching</li>
+                    <li>➜ Collaboration</li>
+                    <li>➜ Resilience</li>
+                    <li>➜ Adaptability</li>
+                </ul>
             </div>
         </div>
     </div>

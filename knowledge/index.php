@@ -12,7 +12,7 @@ include __DIR__ . '/../includes/header.php';
 <!-- Hero Section -->
  
 <?php 
-$hero_image = 'assets/images/large/room-with-tables.jpg';
+$hero_image = 'assets/images/optimized/large/jpg/room-with-tables.jpg';
 $hero_title = 'Knowledge & Insights';
 $hero_subtitle = 'Expert insights on immersive training and learning design';
 include __DIR__ . '/../includes/hero.php';
@@ -63,7 +63,7 @@ include __DIR__ . '/../includes/hero.php';
         </div>
         
         <div class="image-container">
-            <?php render_picture('assets/images/large/OnPodium.jpg', 'Training facilitator leading a session', '', [ 'sizes' => '(min-width: 968px) 600px, 100vw' ]); ?>
+            <?php render_picture('assets/images/optimized/large/jpg/OnPodium.jpg', 'Training facilitator leading a session', '', [ 'sizes' => '(min-width: 968px) 600px, 100vw' ]); ?>
         </div>
     </div>
 </div>

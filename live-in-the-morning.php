@@ -1,5 +1,5 @@
 <?php
-
+include 'includes/config.php';
 // Get content for this specific training program
 $content = getContentById('live-in-the-morning');
 
@@ -9,7 +9,7 @@ if (!$content) {
 }
 
 // SEO settings for this page
-$page_title = $content['title'] . ' | ' . SITE_NAME;
+$page_title = $content['title'];
 $page_description = $content['subtitle'] . ' ' . $content['body'];
 $page_keywords = 'training, immersive learning, role play, corporate training, ' . strtolower(str_replace(' ', '-', $content['title']));
 // Let header compute canonical based on request URI

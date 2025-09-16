@@ -11,7 +11,7 @@ include 'includes/header.php';
 
 <!-- Hero Section -->
 <?php 
-$hero_image = 'assets/images/large/room-with-tables.jpg';
+$hero_image = 'assets/images/optimized/large/jpg/room-with-tables.jpg';
 $hero_title = 'Training Programs';
 $hero_subtitle = 'Immersive role-play scenarios that transform learning';
 include 'includes/hero.php';
@@ -27,7 +27,7 @@ include 'includes/hero.php';
                 <?php endif; ?>
                 
                 <div class="content-card-content">
-                    <h2><?php echo htmlspecialchars($item['title']); ?></h2>
+                    <h2><a href="<?php echo htmlspecialchars($item['id']); ?>"><?php echo htmlspecialchars($item['title']); ?></a></h2>
                     <h3><?php echo htmlspecialchars($item['subtitle']); ?></h3>
                     
                     <p><?php echo htmlspecialchars($item['body']); ?></p>
@@ -44,7 +44,7 @@ include 'includes/hero.php';
                     <?php endif; ?>
                     
                     <div class="flex-spacer"></div>
-                    <a href="<?php echo htmlspecialchars($item['id']); ?>.php" class="cta-button">
+                    <a href="<?php echo htmlspecialchars($item['id']); ?>" class="cta-button">
                         Learn More
                     </a>
                 </div>
@@ -73,7 +73,7 @@ include 'includes/hero.php';
         </div>
         
         <div class="image-container">
-            <?php render_picture('assets/images/large/SCIENTISTS.jpg', 'Scientists collaborating in a training scenario', '', [ 'sizes' => '(min-width: 968px) 600px, 100vw' ]); ?>
+            <?php render_picture('assets/images/optimized/large/jpg/SCIENTISTS.jpg', 'Scientists collaborating in a training scenario', '', [ 'sizes' => '(min-width: 968px) 600px, 100vw' ]); ?>
         </div>
     </div>
 </div>

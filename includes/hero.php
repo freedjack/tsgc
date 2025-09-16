@@ -11,7 +11,18 @@ if (strpos($bgUrl, 'http://') !== 0 && strpos($bgUrl, 'https://') !== 0) {
 }
 ?>
 <div class="hero-container">
-    <div class="hero" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('<?php echo htmlspecialchars($bgUrl); ?>');">
+    <div class="hero">
+        <!-- Hero background image with high priority -->
+        <img src="<?php echo htmlspecialchars($bgUrl); ?>" 
+             alt="<?php echo htmlspecialchars($hero_title); ?>" 
+             class="hero-bg-image" 
+             fetchpriority="high" 
+             loading="eager" 
+             decoding="sync">
+        
+        <!-- Gradient overlay -->
+        <div class="hero-overlay"></div>
+        
         <div class="hero-content">
             <h1><?php echo htmlspecialchars($hero_title); ?></h1>
             <div class="hero-subtitle">

@@ -7,7 +7,7 @@ include __DIR__ . '/../includes/header.php';
 ?>
 
 <?php 
-$hero_image = 'assets/images/large/SCIENTISTS.jpg';
+$hero_image = 'assets/images/optimized/large/jpg/SCIENTISTS.jpg';
 $hero_title = 'Designing effective scenarios';
 $hero_subtitle = 'From goals to debrief';
 include __DIR__ . '/../includes/hero.php';

@@ -7,7 +7,7 @@ include __DIR__ . '/../includes/header.php';
 ?>
 
 <?php 
-$hero_image = 'assets/images/large/OnPodium.jpg';
+$hero_image = 'assets/images/optimized/large/jpg/OnPodium.jpg';
 $hero_title = 'What is immersive training?';
 $hero_subtitle = 'A quick primer on learning by being';
 include __DIR__ . '/../includes/hero.php';

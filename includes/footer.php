@@ -22,17 +22,17 @@
             <div class="footer-section">
                 <h3>Training Programs</h3>
                 <ul>
-                    <li><a href="the-hack.php">The Hack</a></li>
-                    <li><a href="covert-operations-training-academy.php">Covert Ops Academy</a></li>
-                    <li><a href="live-in-the-morning.php">Live in the Morning</a></li>
-                    <li><a href="the-situation-room.php">The Situation Room</a></li>
+                    <li><a href="the-hack">The Hack</a></li>
+                    <li><a href="covert-operations-training-academy">Covert Ops Academy</a></li>
+                    <li><a href="live-in-the-morning">Live in the Morning</a></li>
+                    <li><a href="the-situation-room">The Situation Room</a></li>
                 </ul>
             </div>
             
             <div class="footer-section">
                 <h3>Contact Us</h3>
                 <p>Ready to transform your team's training?</p>
-                <a href="contact.php" class="footer-cta">Get in Touch</a>
+                <a href="/contact" class="footer-cta">Get in Touch</a>
             </div>
         </div>
         
