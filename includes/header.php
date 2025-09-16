@@ -45,13 +45,15 @@ $canonical_url = isset($canonical_url) ? $canonical_url : rtrim(SITE_URL, '/') .
     <link rel="manifest" href="/favicon/site.webmanifest">
     
     <!-- Preconnect to Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Roboto+Slab:wght@400;500;700;900&display=swap" rel="stylesheet">
-    
+     -->
     <!-- Preload critical resources -->
     <link rel="preload" href="/assets/images/tsgc_logo.png" as="image">
-    <link rel="preload" href="/assets/images/thumb/insta crowd.jpg" as="image">
+    <?php if (isset($hero_image)): ?>
+    <link rel="preload" href="/<?php echo ltrim($hero_image, '/'); ?>" as="image" fetchpriority="high">
+    <?php endif; ?>
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -81,7 +83,7 @@ $canonical_url = isset($canonical_url) ? $canonical_url : rtrim(SITE_URL, '/') .
             
             <!-- Navigation -->
             <nav class="main-navigation" id="main-navigation" role="navigation" aria-label="Main navigation" aria-expanded="false">
-                <ul class="nav-list">
+                <ul class="nav-links">
                     <li><a href="/" <?php echo ($current_page === 'index') ? 'aria-current="page"' : ''; ?>>Home</a></li>
                     <li><a href="/training" <?php echo ($current_page === 'training') ? 'aria-current="page"' : ''; ?>>Training</a></li>
                     <li><a href="/knowledge" <?php echo ($current_page === 'knowledge') ? 'aria-current="page"' : ''; ?>>Insights</a></li>
