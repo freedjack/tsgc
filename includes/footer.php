@@ -46,6 +46,6 @@
     <script src="/assets/js/main.js" defer></script>
     
     <!-- Analytics (also in header, but footer ensures it loads) -->
-    <?php include __DIR__ . '/analytics.php'; ?>
+        <?php // include __DIR__ . '/analytics.php'; ?>
 </body>
 </html>

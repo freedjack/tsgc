@@ -94,7 +94,7 @@ include 'includes/hero.php';
 <!-- Additional CSS for this page -->
 <style>
 .outcome-item {
-    background: var(--background-color);
+    background: var(--bg-primary);
     padding: 1.5rem;
     border-radius: 8px;
     border-left: 4px solid var(--accent-color);

@@ -45,10 +45,10 @@ $canonical_url = isset($canonical_url) ? $canonical_url : rtrim(SITE_URL, '/') .
     <link rel="manifest" href="/favicon/site.webmanifest">
     
     <!-- Preconnect to Google Fonts -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Roboto+Slab:wght@400;500;700;900&display=swap" rel="stylesheet">
-     -->
+    
     <!-- Preload critical resources -->
     <link rel="preload" href="/assets/images/tsgc_logo.png" as="image">
     <?php if (isset($hero_image)): ?>
@@ -58,10 +58,13 @@ $canonical_url = isset($canonical_url) ? $canonical_url : rtrim(SITE_URL, '/') .
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/assets/css/style.css">
     
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
     <!-- Analytics -->
     <?php include __DIR__ . '/analytics.php'; ?>
 </head>
-<body>
+<body >
     <!-- Skip to main content link for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
@@ -95,4 +98,5 @@ $canonical_url = isset($canonical_url) ? $canonical_url : rtrim(SITE_URL, '/') .
     </header>
     
     <!-- Main content wrapper -->
-    <main id="main-content" role="main">
+    <main id="main-content" role="main" x-data x-init="$el.classList.add('opacity-0'); setTimeout(() => $el.classList.remove('opacity-0'), 50)"
+      class="transition-opacity duration-700 ease-out opacity-0">

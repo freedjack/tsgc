@@ -21,6 +21,13 @@ include __DIR__ . '/../includes/hero.php';
 <!-- Knowledge Articles Grid -->
 <div class="container">
     <div class="content-grid">
+        
+        <div class="content-card">
+            <h2>Why Immersive Training Works</h2>
+            <p>Discover the science behind why immersive training is so effective for skill development and team building.</p>
+            <p><strong>Key Topics:</strong> Facilitation techniques, group dynamics, debriefing strategies</p>
+            <a href="/knowledge/why-immersive-training-works" class="cta-button">Read Article</a>
+        </div>
         <div class="content-card">
             <h2>What is Immersive Training?</h2>
             <p>Discover the fundamentals of immersive training and why it's so effective for skill development and team building.</p>
@@ -33,13 +40,6 @@ include __DIR__ . '/../includes/hero.php';
             <p>Learn the art and science of creating engaging training scenarios that maximize learning outcomes.</p>
             <p><strong>Key Topics:</strong> Scenario design principles, engagement techniques, learning objectives</p>
             <a href="/knowledge/designing-effective-scenarios" class="cta-button">Read Article</a>
-        </div>
-
-        <div class="content-card">
-            <h2>Facilitation Tips</h2>
-            <p>Master the skills needed to facilitate immersive training sessions and guide participants to meaningful insights.</p>
-            <p><strong>Key Topics:</strong> Facilitation techniques, group dynamics, debriefing strategies</p>
-            <a href="/knowledge/facilitation-tips" class="cta-button">Read Article</a>
         </div>
     </div>
 </div>
@@ -80,6 +80,6 @@ include __DIR__ . '/../includes/hero.php';
     </div>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include __DIR__ . '/../includes/footer.php'; ?>
 
 

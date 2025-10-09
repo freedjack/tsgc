@@ -1,5 +1,6 @@
 <?php
 
+include 'includes/config.php';
 // Get content for this specific training program
 $content = getContentById('the-hack');
 
@@ -9,7 +10,7 @@ if (!$content) {
 }
 
 // SEO settings for this page
-$page_title = $content['title'] . ' | ' . SITE_NAME;
+$page_title = $content['title'];
 $page_description = $content['subtitle'] . ' ' . $content['body'];
 $page_keywords = 'cyber security training, hacker simulation, red team training, cyber security awareness, immersive learning';
 // Let header compute canonical based on request URI
@@ -156,7 +157,7 @@ include 'includes/hero.php';
 </div>
 
 <!-- Additional CSS for this page -->
-<style>
+<!-- <style>
 .scenario-content h3 {
     color: var(--accent-color);
     margin-top: 2rem;
@@ -170,7 +171,7 @@ include 'includes/hero.php';
 }
 
 .outcome-item {
-    background: var(--background-color);
+    background: var(--bg-primary);
     padding: 1.5rem;
     border-radius: 8px;
     border-left: 4px solid var(--accent-color);
@@ -180,7 +181,7 @@ include 'includes/hero.php';
     margin: 0;
     color: var(--primary-color);
     font-size: 1.1rem;
-}
+} -->
 </style>
 
 <?php include 'includes/footer.php'; ?>

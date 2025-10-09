@@ -26,7 +26,7 @@ if (strpos($bgUrl, 'http://') !== 0 && strpos($bgUrl, 'https://') !== 0) {
         <div class="hero-content">
             <h1><?php echo htmlspecialchars($hero_title); ?></h1>
             <div class="hero-subtitle">
-                <div class="primary-bg"><?php echo htmlspecialchars($hero_subtitle); ?></div>
+                <h2><?php echo htmlspecialchars($hero_subtitle); ?></h2>
             </div>
         </div>
     </div>

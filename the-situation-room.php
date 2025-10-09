@@ -9,7 +9,7 @@ if (!$content) {
 }
 
 // SEO settings for this page
-$page_title = $content['title'] . ' | ' . SITE_NAME;
+$page_title = $content['title'];
 $page_description = $content['subtitle'] . ' ' . $content['body'];
 $page_keywords = 'training, immersive learning, role play, corporate training, ' . strtolower(str_replace(' ', '-', $content['title']));
 // Let header compute canonical based on request URI
@@ -94,7 +94,7 @@ include 'includes/hero.php';
 <!-- Additional CSS for this page -->
 <style>
 .outcome-item {
-    background: var(--background-color);
+    background: var(--bg-primary);
     padding: 1.5rem;
     border-radius: 8px;
     border-left: 4px solid var(--accent-color);

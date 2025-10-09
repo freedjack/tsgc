@@ -14,9 +14,9 @@ $front_page_training = getFrontPageTraining();
 
 <!-- Hero Section -->
 <?php 
-$hero_image = 'assets/images/optimized/thumb/jpg/insta-crowd.jpg';
+$hero_image = 'assets/images/optimized/large/jpg/Bomb-defuse-crowd.jpg';
 $hero_title = 'Smart Play';
-$hero_subtitle = "Using role play, simulations and games to get serious results.";
+$hero_subtitle = "Immersive theatrical roleplay for the real world learning.";
 include 'includes/hero.php';
 ?>
 
@@ -27,15 +27,8 @@ include 'includes/hero.php';
             <h2>Whats this all about?</h2>
             <div class="video-text-layout">
             <div class="video-container">
-                <iframe 
-                    src="https://www.youtube.com/embed/Vv8pzz45E7c?si=5TVsAapMbCb_KBPf" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen
-                    title="The Serious Games Company Video"
-                    loading="lazy"
-                    referrerpolicy="strict-origin-when-cross-origin">
-                </iframe>
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/1084698269?h=5974f89fd5" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
+
             </div>
                 <div class="text-content-right">
                     <p>We are the Serious Games Company. <strong>We use role play, simulations and games to unlock your team's potential.</strong></p>
