@@ -1,4 +1,8 @@
 .aider*
 .vscode*
 .DS_Store
+.env
+vendor*
+tests
+tests*
 node_modules*
