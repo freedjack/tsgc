@@ -3,96 +3,61 @@
 /* rgb(78, 205, 196) */
 /* Ocean Breeze Theme - CSS Custom Properties */
 :root {
-  /* Ocean Breeze Theme */
-  --theme-name: 'ocean-breeze';
-  
   /* Core Colors */
   --primary-color: #0f4c75;
   --secondary-color: #3282b8;
-  --accent-color: #0f4c75;
-  --tertiary-color: #bbe1fa;
-  --quaternary-color: #71c9ce;
-  --quinary-color: #4ecdc4;
+  --accent-color: #EE3647;
+  --serious-color: #EE3647;
   
   /* Text Colors */
-  --text-primary: #1e3a8a;
-  --text-secondary: #475569;
-  --text-muted: #64748b;
+  --text-primary: rgb(14, 18, 18);
   --text-inverse: #ffffff;
   
   /* Background Colors */
   --bg-primary: #f0f9ff;
-  --bg-secondary: #e0f2fe;
-  --bg-tertiary: #bae6fd;
-  --bg-accent: #f0f9ff;
-  --bg-overlay: rgba(15, 76, 117, 0.8);
   
   /* Card & Surface Colors */
   --card-bg: #ffffff;
   --card-border: rgba(15, 76, 117, 0.1);
-  --surface-elevated: #ffffff;
-  --surface-hover: #f0f9ff;
   
   /* Interactive Colors */
   --link-color: var(--secondary-color);
   --link-hover: var(--primary-color);
   --button-primary: var(--secondary-color);
   --button-primary-hover: var(--primary-color);
-  --button-secondary: var(--bg-tertiary);
-  --button-secondary-hover: var(--text-primary);
-  
-  /* Status Colors */
-  --success-color: #059669;
-  --warning-color: #d97706;
-  --error-color: #dc2626;
-  --info-color: var(--secondary-color);
   
   /* Shadows & Effects */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
-  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.15);
   
   /* Transitions */
   --transition-fast: 0.15s ease;
   --transition-normal: 0.3s ease;
-  --transition-slow: 0.5s ease;
   
   /* Mobile Menu */
   --mobile-menu-transition: var(--transition-fast);
-  --mobile-menu-shadow: var(--shadow-md);
   
-  /* Spacious Layout */
-  --layout-name: 'spacious';
-  --container-max-width: 1200px;
+  /* Layout */
+  --container-max-width: 1500px;
   --content-max-width: 1000px;
   --grid-gap: 3rem;
   --section-spacing: 6rem;
   --card-spacing: 3rem;
   --border-radius: 12px;
-  --content-line-height: 1.7;
   --container-padding: 4rem 10rem;
   --card-padding: 3rem;
   
-  /* 80s Navigation - Ocean Breeze */
-  --nav-bg-primary: linear-gradient(135deg, #0f4c75 0%, #3282b8 100%);
-  --nav-bg-secondary: linear-gradient(45deg, #bbe1fa 0%, #71c9ce 100%);
-  --nav-bg-accent: linear-gradient(90deg, #3282b8 0%, #0f4c75 100%);
+  /* Navigation */
   --nav-glow-color: rgba(187, 225, 250, 0.4);
   --nav-shadow-80s: 0 8px 32px rgba(15, 76, 117, 0.4), 0 0 0 1px rgba(187, 225, 250, 0.2);
-  --nav-text-glow: 0 0 10px rgba(187, 225, 250, 0.6);
   --nav-border-radius: 12px;
   --nav-button-bg: rgba(187, 225, 250, 0.15);
-  --nav-button-hover: rgba(187, 225, 250, 0.25);
   --nav-button-shadow: 0 2px 8px rgba(15, 76, 117, 0.2);
   --nav-button-glow: 0 0 15px rgba(187, 225, 250, 0.4);
   
   /* Typography */
-  /* --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --font-secondary: 'Roboto Slab', Georgia, 'Times New Roman', serif; */
-  
-  --font-primary: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --font-secondary: 'Tahoma', Georgia, 'Times New Roman', serif;
+  --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-secondary: 'Roboto Slab', Georgia, 'Times New Roman', serif;
 
   /* Base Font Settings */
   font-family: var(--font-primary);
@@ -169,7 +134,7 @@ button:focus,
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid var(--accent-color);
+  border-top: 2px solid var(--accent-color);
   outline-offset: 2px;
 }
 
@@ -185,13 +150,15 @@ h1 {
   transition: color var(--transition-normal);
 }
 
-h2 {
+h2, h2 a {
   font-size: 1.4rem;
   margin-bottom: 1rem;
-  color: var(--primary-color);
+  color: var(--text-primary);
   font-weight: 700;
+  text-underline-offset: 0.5rem;
   font-family: var(--font-secondary);
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: var(--serious-color);
   letter-spacing: -0.02em;
   line-height: 1.6;
   transition: color var(--transition-normal);
@@ -239,6 +206,9 @@ button:focus-visible {
   outline: 2px solid var(--accent-color);
   outline-offset: 2px;
 }
+p{
+  margin-top: 0;
+}
 
 .primary-bg {
   background-color: var(--primary-color);
@@ -250,13 +220,12 @@ button:focus-visible {
   left: 0;
   right: 0;
   z-index: 1000;  
-  /* background: linear-gradient(90deg, white, var(--primary-color)); */
+  background:  var(--bg-primary);
   transition: all var(--transition-normal);
   border-bottom: 1px solid var(--nav-glow-color);
   box-shadow: var(--nav-shadow-80s);
   position: sticky;
-  /* -webkit-backdrop-filter: blur(10px); */
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .site-header.scrolled {
@@ -300,7 +269,7 @@ button:focus-visible {
 .mobile-menu-toggle {
   display: none;
   flex-direction: column;
-  background: var(--nav-button-bg);
+  background: var(--primary-color);
   border: 1px solid var(--nav-glow-color);
   border-radius: var(--nav-border-radius);
   cursor: pointer;
@@ -368,53 +337,6 @@ button:focus-visible {
   display: flex;
   align-items: center;
 }
-
-.nav-list {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 1.5rem;
-  align-items: center;
-  position: relative;
-}
-
-.nav-list a {
-  text-decoration: none;
-  padding: 0.6rem 1.2rem;
-  background: var(--nav-button-bg);
-  font-weight: 500;
-  position: relative;
-  letter-spacing: 0.3px;
-  text-shadow: var(--nav-text-glow);
-  /* border: 1px solid var(--nav-glow-color); */
-
-  overflow: hidden;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  z-index: 1;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-}
-
-.nav-list a:hover::before {
-  left: 100%;
-}
-
-.nav-list a:hover {
-  border-color: var(--nav-glow-color);
-  background: var(--nav-button-hover);
-}
-
-
-
-.nav-list a[aria-current="page"] {
-  background: var(--nav-button-hover);
-  border-color: var(--nav-glow-color);
-  box-shadow: var(--nav-button-glow), var(--nav-button-shadow);
-  transform: translateY(-1px);
-}
-
 /* New Navigation Links Styles */
 .nav-links {
     display: flex;
@@ -422,28 +344,64 @@ button:focus-visible {
 }
 
 .nav-links li {
-    margin-left: 2rem;
+    margin-right: 2.5rem;
 }
 
 .nav-links a {
-    color: var(--dark-color);
+    color: var( --text-primary);
+    font-family: var(--font-secondary);
     font-weight: 500;
     position: relative;
 }
 
+
+
+/* 
+ * Markup example:
+ * <div class="red-circle-icon"></div>
+ * 
+ * Creates a red circle with a black circle positioned in the lower half,
+ * resembling an eye or stylized droplet icon.
+ */
+ .red-circle-icon {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-color: #F06262;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.red-circle-icon::before {
+  content: '';
+  position: absolute;
+  width: 42px; /* ~70% of parent circle */
+  height: 42px;
+  background-color: #000000;
+  border-radius: 50%;
+  top: 50%; /* Position at horizontal midpoint of parent */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Adjust positioning to place black circle in lower half */
+  margin-top: 9px; /* Moves it down so it extends beyond the red circle bottom */
+}
+
+
 .nav-links a::after {
+    border-radius: 50%;
     content: '';
     position: absolute;
+    background-color: var(--serious-color);
     bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--secondary-color);
-    transition: var(--transition);
+    left: -3px;
+    width: 5px;
+    height: 5px;
+    transition: var(--transition-normal);
 }
 
 .nav-links a:hover::after {
-    width: 100%;
+    border-radius: 0%;
+    width: 120%;
 }
 
 /* Layout Containers */
@@ -512,8 +470,8 @@ button:focus-visible {
   height: 100%;
   background-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.5)
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.1)
   );
   background-blend-mode: multiply;
   background-color: rgba(26, 35, 126, 0.3);
@@ -538,15 +496,20 @@ button:focus-visible {
   line-height: 1.1;
 }
 
-.hero-subtitle,
-.hero-content h2 {
+
+.hero-subtitle h2 {
   font-size: clamp(1.25rem, 2vw, 1.5rem);
   font-family: var(--font-secondary);
-  color: var(--quinary-color);
+  color: var(--text-inverse);
   margin-bottom: 2rem;
   font-weight: 900;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: var(--serious-color);
+  padding: 0.5rem 0.5rem;
+  text-decoration: none;
+  display: inline;
 }
+
 
 /* Grid Layouts */
 .content-grid {
@@ -750,7 +713,7 @@ button:focus-visible {
   margin: 0 auto;
   padding: 0 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: var(--grid-gap);
   transition: max-width var(--transition-normal), gap var(--transition-normal);
 }
@@ -872,9 +835,11 @@ button:focus-visible {
   .main-navigation {
     position: absolute;
     top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--nav-bg-secondary);
+    left: auto;
+    right: auto;
+    width: 100%;
+    flex-direction: column;
+    background: var(--bg-primary);
     box-shadow: var(--nav-shadow-80s);
     transform: translateY(-100%);
     transition: all var(--mobile-menu-transition);
@@ -895,6 +860,7 @@ button:focus-visible {
     flex-direction: column;
     padding: 1.5rem;
     gap: 1rem;
+    width: 100%;
   }
   
   .nav-links a {
@@ -907,6 +873,10 @@ button:focus-visible {
     background: var(--nav-button-bg);
     box-shadow: var(--nav-button-shadow);
     border: 1px solid var(--nav-glow-color);
+  }
+  .nav-links li {
+    margin-right: 0;
+    width: 100%;
   }
   
   .header-flex {
@@ -987,4 +957,16 @@ button:focus-visible {
     box-shadow: none;
     border: 1px solid #ccc;
   }
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+.transition-opacity {
+  transition: opacity var(--transition-normal);
 }
