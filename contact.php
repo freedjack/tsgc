@@ -23,7 +23,7 @@ include 'includes/hero.php';
         <!-- Contact Form -->
         <div class="content-card">
             <h2>Send us a Message</h2>
-            <form id="contact-form" method="POST" action="process-contact.php" aria-describedby="form-status" novalidate>
+            <form id="contact-form" aria-describedby="form-status" novalidate>
                 <div class="form-group">
                     <label for="name">Name *</label>
                     <input type="text" id="name" name="name" required aria-describedby="name-help">
@@ -86,125 +86,21 @@ include 'includes/hero.php';
             <div class="contact-info">
                 <div class="contact-item">
                     <h3>Email</h3>
-                    <p><a href="mailto:hello@theseriousgamescompany.com">hello@theseriousgamescompany.com</a></p>
+                    <p>
+                        <a href="#" id="email-link" class="email-obfuscated" data-email="hello@theseriousgamescompany.com">Click to reveal email address</a>
+                        <noscript>
+                            <br><small>Email: <span class="rot13">uryyb@gurfrevfntrfpbzrpbz.pbz</span></small>
+                        </noscript>
+                    </p>
                 </div>
                 
-                <div class="contact-item">
-                    <h3>Phone</h3>
-                    <p><a href="tel:+44123456789">+44 (0) 123 456 789</a></p>
-                </div>
-                
-                <div class="contact-item">
-                    <h3>Response Time</h3>
-                    <p>We typically respond within 24 hours during business days.</p>
-                </div>
             </div>
             
-            <h3>What Happens Next?</h3>
-            <ol>
-                <li><strong>Initial Contact:</strong> We'll respond to your inquiry within 24 hours</li>
-                <li><strong>Discovery Call:</strong> We'll schedule a call to discuss your needs in detail</li>
-                <li><strong>Proposal:</strong> We'll create a customized training proposal for your organization</li>
-                <li><strong>Planning:</strong> Once approved, we'll work together to plan the perfect training session</li>
-                <li><strong>Delivery:</strong> We'll deliver an unforgettable training experience for your team</li>
-            </ol>
         </div>
     </div>
 </div>
 
-<!-- FAQ Section -->
-<div class="content-card container">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-grid">
-        <div class="faq-item">
-            <h3>How long does a typical training session last?</h3>
-            <p>Our training sessions can range from half-day intensive workshops to multi-day comprehensive programs, depending on your needs and objectives.</p>
-        </div>
-        
-        <div class="faq-item">
-            <h3>Where do the training sessions take place?</h3>
-            <p>We can deliver training at your location, at our dedicated training facilities, or at a venue of your choice. We're flexible to accommodate your preferences.</p>
-        </div>
-        
-        <div class="faq-item">
-            <h3>What's the ideal group size for training?</h3>
-            <p>Our training works best with groups of 6-20 participants, but we can accommodate larger groups with additional facilitators.</p>
-        </div>
-        
-        <div class="faq-item">
-            <h3>Do you provide follow-up support?</h3>
-            <p>Yes, we provide comprehensive debriefing sessions and can offer ongoing support to help reinforce learning and track progress.</p>
-        </div>
-        
-        <div class="faq-item">
-            <h3>Can you customize training for our specific industry?</h3>
-            <p>Absolutely! We specialize in creating bespoke training scenarios tailored to your industry, challenges, and organizational culture.</p>
-        </div>
-        
-        <div class="faq-item">
-            <h3>What makes your training different from traditional methods?</h3>
-            <p>Our immersive, hands-on approach engages participants actively in realistic scenarios, making learning more memorable and immediately applicable.</p>
-        </div>
-    </div>
-</div>
 
-<!-- FAQPage JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How long does a typical training session last?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our training sessions can range from half-day intensive workshops to multi-day comprehensive programs, depending on your needs and objectives."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Where do the training sessions take place?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We can deliver training at your location, at our dedicated training facilities, or at a venue of your choice. We're flexible to accommodate your preferences."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What's the ideal group size for training?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our training works best with groups of 6-20 participants, but we can accommodate larger groups with additional facilitators."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you provide follow-up support?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we provide comprehensive debriefing sessions and can offer ongoing support to help reinforce learning and track progress."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you customize training for our specific industry?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Absolutely! We specialize in creating bespoke training scenarios tailored to your industry, challenges, and organizational culture."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What makes your training different from traditional methods?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our immersive, hands-on approach engages participants actively in realistic scenarios, making learning more memorable and immediately applicable."
-      }
-    }
-  ]
-}
-</script>
 
 <!-- Additional CSS for contact form -->
 <style>
@@ -292,12 +188,67 @@ include 'includes/hero.php';
 }
 
 .contact-item a {
-    color: var(--text-color);
+    color: var(--text-primary);
     text-decoration: none;
 }
 
 .contact-item a:hover {
     color: var(--accent-color);
+}
+
+/* Email obfuscation styles */
+.email-obfuscated {
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.email-obfuscated:hover {
+    color: var(--accent-color);
+}
+
+.email-obfuscated.revealed {
+    color: var(--text-primary);
+    cursor: default;
+}
+
+.email-obfuscated-text {
+    cursor: pointer;
+    user-select: none;
+    color: var(--accent-color);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.email-obfuscated-text:hover {
+    color: var(--primary-color);
+}
+
+/* ROT13 fallback for users without JavaScript */
+.rot13 {
+    font-family: monospace;
+    background-color: #f8f9fa;
+    padding: 2px 4px;
+    border-radius: 3px;
+    border: 1px solid #dee2e6;
+    cursor: help;
+    position: relative;
+}
+
+.rot13:hover::after {
+    content: "Decode this ROT13 text to get the email address";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1000;
+    margin-bottom: 5px;
 }
 
 .faq-grid {
@@ -389,6 +340,55 @@ document.addEventListener('DOMContentLoaded', function() {
                 const submitButton = form.querySelector('button[type="submit"]');
                 const formStatus = document.getElementById('form-status');
     
+    // ROT13 decoder function
+    function rot13(str) {
+        return str.replace(/[a-zA-Z]/g, function(c) {
+            return String.fromCharCode((c <= 'Z' ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
+        });
+    }
+    
+    // Email obfuscation functionality
+    function setupEmailObfuscation() {
+        // Handle clickable email links
+        const emailLinks = document.querySelectorAll('.email-obfuscated');
+        emailLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const email = this.getAttribute('data-email');
+                if (email) {
+                    this.textContent = email;
+                    this.href = 'mailto:' + email;
+                    this.classList.add('revealed');
+                }
+            });
+        });
+        
+        // Handle obfuscated text spans
+        const emailTexts = document.querySelectorAll('.email-obfuscated-text');
+        emailTexts.forEach(span => {
+            span.addEventListener('click', function() {
+                const email = this.getAttribute('data-email');
+                if (email) {
+                    this.textContent = email;
+                    this.style.cursor = 'default';
+                }
+            });
+        });
+        
+        // Auto-decode ROT13 text for users with JavaScript
+        const rot13Elements = document.querySelectorAll('.rot13');
+        rot13Elements.forEach(element => {
+            const encodedText = element.textContent;
+            const decodedText = rot13(encodedText);
+            element.textContent = decodedText;
+            element.style.cursor = 'default';
+            element.title = 'Email address (auto-decoded)';
+        });
+    }
+    
+    // Initialize email obfuscation
+    setupEmailObfuscation();
+    
     // Remove the default form action to handle with JavaScript
     form.removeAttribute('action');
     form.removeAttribute('method');
@@ -465,7 +465,7 @@ document.addEventListener('DOMContentLoaded', function() {
             errorMessage.className = 'form-error';
             errorMessage.innerHTML = `
                 <h3>Sorry, something went wrong</h3>
-                <p>Please try again or contact us directly at <a href="mailto:hello@theseriousgamescompany.com">hello@theseriousgamescompany.com</a></p>
+                <p>Please try again or contact us directly at <span class="email-obfuscated-text" data-email="hello@theseriousgamescompany.com">[email protected]</span></p>
             `;
             form.insertBefore(errorMessage, form.firstChild);
             if (formStatus) {
@@ -474,6 +474,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Scroll to error message
             errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Re-setup email obfuscation for the new error message
+            setupEmailObfuscation();
         } finally {
             // Reset button state
             submitButton.disabled = false;
