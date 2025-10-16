@@ -4,7 +4,7 @@ include 'includes/config.php';
 $content = getContentById('covert-operations-training-academy');
 
 if (!$content) {
-    header('Location: training.php');
+    header('Location: /training');
     exit;
 }
 

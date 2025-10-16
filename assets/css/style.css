@@ -354,8 +354,10 @@ p{
     position: relative;
 }
 
-
-
+.no-bullets {
+  list-style: none;
+  padding-left: 0;
+}
 /* 
  * Markup example:
  * <div class="red-circle-icon"></div>

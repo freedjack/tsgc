@@ -22,11 +22,11 @@ include 'includes/hero.php';
         </div>
         <div class="faq-item" id="faq-location">
             <h3>Where do the training sessions take place?</h3>
-            <p>We can deliver training at your location, at our dedicated training facilities, or at a venue of your choice. We're flexible to accommodate your preferences.</p>
+            <p>We can deliver training at your location or at a venue of your choice. We're flexible to accommodate your preferences.</p>
         </div>
         <div class="faq-item" id="faq-size">
             <h3>What's the ideal group size for training?</h3>
-            <p>Our training works best with groups of 6-20 participants, but we can accommodate larger groups with additional facilitators.</p>
+            <p>Our training works best with groups of 6-30 participants, but we can accommodate larger groups with additional facilitators.</p>
         </div>
         <div class="faq-item" id="faq-support">
             <h3>Do you provide follow-up support?</h3>
@@ -38,7 +38,7 @@ include 'includes/hero.php';
         </div>
         <div class="faq-item" id="faq-difference">
             <h3>What makes your training different from traditional methods?</h3>
-            <p>Our immersive, hands-on approach engages participants actively in realistic scenarios, making learning more memorable and immediately applicable.</p>
+            <p>Our immersive, hands-on approach engages participants actively in realistic scenarios, making learning more memorable and immediately applicable. Read more about <a href="/knowledge/benefits-of-role-play">the benefits of role play</a>.</p>
         </div>
     </div>
 </div>
@@ -50,21 +50,6 @@ include 'includes/hero.php';
     </div>
     
 </div>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type": "Question", "name": "How long does a typical training session last?", "acceptedAnswer": {"@type": "Answer", "text": "Our training sessions can range from half-day intensive workshops to multi-day comprehensive programs, depending on your needs and objectives."}},
-    {"@type": "Question", "name": "Where do the training sessions take place?", "acceptedAnswer": {"@type": "Answer", "text": "We can deliver training at your location, at our dedicated training facilities, or at a venue of your choice."}},
-    {"@type": "Question", "name": "What's the ideal group size for training?", "acceptedAnswer": {"@type": "Answer", "text": "Our training works best with groups of 6-20 participants, but we can accommodate larger groups."}},
-    {"@type": "Question", "name": "Do you provide follow-up support?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, we provide comprehensive debriefing sessions and ongoing support to help reinforce learning."}},
-    {"@type": "Question", "name": "Can you customize training for our specific industry?", "acceptedAnswer": {"@type": "Answer", "text": "Absolutely! We create bespoke training scenarios tailored to your industry and challenges."}},
-    {"@type": "Question", "name": "What makes your training different from traditional methods?", "acceptedAnswer": {"@type": "Answer", "text": "Our immersive, hands-on approach engages participants in realistic scenarios, making learning memorable and applicable."}}
-  ]
-}
-</script>
 
 <?php include 'includes/footer.php'; ?>
 

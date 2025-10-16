@@ -1,7 +1,7 @@
 <?php
 
 // SEO settings for knowledge page
-$page_title = 'Knowledge & Insights | ' ;
+$page_title = 'Knowledge & Insights';
 $page_description = 'Explore our insights on immersive training, scenario design, and facilitation techniques. Learn from our experience in creating effective learning experiences.';
 $page_keywords = 'immersive training, scenario design, facilitation tips, learning insights, training knowledge, serious games insights';
 $canonical_url =  '/knowledge';
@@ -23,10 +23,10 @@ include __DIR__ . '/../includes/hero.php';
     <div class="content-grid">
         
         <div class="content-card">
-            <h2>Why Immersive Training Works</h2>
-            <p>Discover the science behind why immersive training is so effective for skill development and team building.</p>
-            <p><strong>Key Topics:</strong> Facilitation techniques, group dynamics, debriefing strategies</p>
-            <a href="/knowledge/why-immersive-training-works" class="cta-button">Read Article</a>
+            <h2>Benefits of role play</h2>
+            <p>The benefits of role play and how it can be used to improve skills and team building.</p>
+            <p><strong>Key Topics:</strong> Role play, immersive training, skill development, team building</p>
+            <a href="/knowledge/benefits-of-role-play" class="cta-button">Read Article</a>
         </div>
         <div class="content-card">
             <h2>What is Immersive Training?</h2>

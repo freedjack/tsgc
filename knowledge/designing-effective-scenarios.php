@@ -1,6 +1,6 @@
 <?php
 
-$page_title = 'Designing effective scenarios ';
+$page_title = 'Designing effective scenarios';
 $page_description = 'From learning goals to debriefs: how to design high-impact immersive scenarios.';
 
 include __DIR__ . '/../includes/header.php';

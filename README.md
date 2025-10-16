@@ -24,7 +24,6 @@ tsgc/
 ├── live-in-the-morning.php   # Individual training program page
 ├── covert-operations-training-academy.php # Individual training program page
 ├── the-situation-room.php    # Individual training program page
-├── process-contact.php       # Form processing script
 ├── generate-pages.php        # Script to generate training program pages
 ├── includes/
 │   ├── header.php            # Shared header component
@@ -167,13 +166,13 @@ When adding new images:
 
 ## Form Processing
 
-The contact form (`contact.php`) submits to `process-contact.php`. In production, you should:
+The contact form (`contact.php`) uses Web3Forms for form submission. The form is handled entirely by JavaScript and submitted to Web3Forms API.
 
-1. **Email Configuration**: Set up proper email sending (PHPMailer recommended)
-2. **Database Storage**: Store form submissions in a database
-3. **Spam Protection**: Add CAPTCHA or other anti-spam measures
-4. **Validation**: Enhance server-side validation
-5. **Security**: Implement CSRF protection
+The form uses Web3Forms API for submission, which handles:
+- Email delivery
+- Spam protection
+- Form validation
+- Success/error responses
 
 ## Maintenance
 

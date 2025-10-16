@@ -3,7 +3,7 @@
 http_response_code(404);
 
 // SEO settings for 404 page
-$page_title = 'Page Not Found | ' . SITE_NAME;
+$page_title = 'Page Not Found';
 $page_description = 'The page you are looking for could not be found.';
 $canonical_url = SITE_URL . '/404';
 

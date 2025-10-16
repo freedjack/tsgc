@@ -91,6 +91,95 @@ function getContentById($id) {
     return null;
 }
 
+// Helper function to validate and improve alt text
+if (!function_exists('validate_alt_text')) {
+    /**
+     * Validates and improves alt text for accessibility
+     * @param string $alt Current alt text
+     * @param string $src Image source path
+     * @return string Improved alt text
+     */
+    function validate_alt_text($alt, $src) {
+        $alt = trim($alt);
+        
+        // Check for common problematic alt text
+        $bad_alt_texts = ['', 'image', 'img', 'photo', 'picture', '...', 'alt', 'untitled'];
+        
+        if (in_array(strtolower($alt), $bad_alt_texts) || strlen($alt) < 3) {
+            // Generate descriptive alt text from filename
+            $pathInfo = pathinfo($src);
+            $filename = $pathInfo['filename'];
+            
+            // Clean up filename and make it descriptive
+            $alt = str_replace(['-', '_'], ' ', $filename);
+            $alt = preg_replace('/\d+/', '', $alt); // Remove numbers
+            $alt = trim($alt);
+            $alt = ucwords($alt);
+            
+            // Add context if it's a training-related image
+            if (strpos($src, 'training') !== false || strpos($src, 'session') !== false) {
+                $alt = "Training session: {$alt}";
+            } elseif (strpos($src, 'team') !== false || strpos($src, 'group') !== false) {
+                $alt = "Team: {$alt}";
+            } elseif (strpos($src, 'room') !== false || strpos($src, 'facility') !== false) {
+                $alt = "Training facility: {$alt}";
+            }
+            
+            // Log warning for missing alt text
+            error_log("Accessibility Warning: Missing or insufficient alt text for image: {$src}. Generated: '{$alt}'");
+        }
+        
+        return $alt;
+    }
+}
+
+// Function to audit images for alt text issues (for development/debugging)
+if (!function_exists('audit_image_alt_text')) {
+    /**
+     * Audits all images in the site for alt text issues
+     * @return array Array of issues found
+     */
+    function audit_image_alt_text() {
+        $issues = [];
+        $image_extensions = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'avif'];
+        
+        // Scan PHP files for render_picture calls
+        $php_files = glob(__DIR__ . '/../*.php');
+        $php_files = array_merge($php_files, glob(__DIR__ . '/../knowledge/*.php'));
+        
+        foreach ($php_files as $file) {
+            $content = file_get_contents($file);
+            
+            // Find render_picture calls
+            preg_match_all('/render_picture\s*\(\s*[\'"]([^\'"]+)[\'"]\s*,\s*[\'"]([^\'"]*)[\'"]/', $content, $matches, PREG_SET_ORDER);
+            
+            foreach ($matches as $match) {
+                $src = $match[1];
+                $alt = $match[2];
+                
+                // Check for issues
+                if (empty($alt) || strlen($alt) < 3) {
+                    $issues[] = [
+                        'file' => basename($file),
+                        'image' => $src,
+                        'alt' => $alt,
+                        'issue' => 'Missing or insufficient alt text'
+                    ];
+                } elseif (in_array(strtolower($alt), ['image', 'img', 'photo', 'picture', '...', 'alt', 'untitled'])) {
+                    $issues[] = [
+                        'file' => basename($file),
+                        'image' => $src,
+                        'alt' => $alt,
+                        'issue' => 'Generic alt text'
+                    ];
+                }
+            }
+        }
+        
+        return $issues;
+    }
+}
+
 // Render responsive <picture> with optional AVIF/WEBP if variants exist
 if (!function_exists('render_picture')) {
     /**
@@ -100,6 +189,9 @@ if (!function_exists('render_picture')) {
      * @param array $attrs Additional attributes: sizes, loading, decoding, width, height, style
      */
     function render_picture($src, $alt, $class = '', $attrs = []) {
+        // Validate and improve alt text for accessibility
+        $alt = validate_alt_text($alt, $src);
+        
         $rootDir = dirname(__DIR__);
         $webPath = $src;
         $absPath = $rootDir . '/' . ltrim($webPath, '/');

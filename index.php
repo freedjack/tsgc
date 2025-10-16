@@ -1,7 +1,7 @@
 <?php
 
 // SEO settings for homepage
-$page_title = ' | Immersive Role Play and Training';
+$page_title = 'Immersive Role Play and Training';
 $page_description = 'The Serious Games Company creates engaging, immersive role play, simulations and games for effective learning and skill development in corporate environments.';
 $page_keywords = 'serious games, role play, simulations, training, immersive learning, corporate training, team building, learning by being';
 
@@ -60,7 +60,7 @@ include 'includes/hero.php';
                 <li>Build confidence, sharpen social skills, and have a great time doing it</li>
             </ul>
             <div>
-                <a href="contact.php" class="cta-button" style="width: 90%; display: block; text-align: center;">Get in touch</a>
+                <a href="/contact" class="cta-button" style="width: 90%; display: block; text-align: center;">Get in touch</a>
             </div>
             </div>
         </div>
@@ -99,7 +99,7 @@ include 'includes/hero.php';
     <div class="c-card">  
         <div class="header-flex">
             <h2 class="underline-text">Explore our Training Scenarios</h2>
-            <a href="training.php" class="view-all-link">View all training programs</a>
+            <a href="/training" class="view-all-link">View all training programs</a>
         </div>
     </div>
     
@@ -143,7 +143,7 @@ include 'includes/hero.php';
                         <p>Work with us to construct and curate training scenarios that are tailored to your organisation and your needs.</p>
                         <h4>Partner with us..?</h4>
                         <p>You've made it this far, perhaps you would like to help us develop our latest training scenario?</p>
-                        <p><a href="contact.php" class="cta-button">Find out more</a></p>
+                        <p><a href="/contact" class="cta-button">Find out more</a></p>
                     </div>
                 </div>
             </div>
@@ -159,7 +159,7 @@ include 'includes/hero.php';
                 <p>Role play, simulations and games are great for learning new skills and behaviours</p>
                 <p>But they can also be used to improve existing skills and behaviours as well as building confidence and social skills.</p>
                 <h4>We can help you with</h4>
-                <ul>
+                <ul class="no-bullets">
                     <li>➜ Emotional Intelligence</li>
                     <li>➜ Neurodiversity Strategies</li>
                     <li>➜ Wellbeing and resilience</li>

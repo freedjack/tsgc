@@ -1,6 +1,6 @@
 <?php
 
-$page_title = 'What is immersive training? | ';
+$page_title = 'What is immersive training?';
 $page_description = 'A quick primer on learning by being — what immersive training is and why it works.';
 
 include __DIR__ . '/../includes/header.php';

@@ -89,7 +89,7 @@ $canonical_url = isset($canonical_url) ? $canonical_url : rtrim(SITE_URL, '/') .
                 <ul class="nav-links">
                     <li><a href="/" <?php echo ($current_page === 'index') ? 'aria-current="page"' : ''; ?>>Home</a></li>
                     <li><a href="/training" <?php echo ($current_page === 'training') ? 'aria-current="page"' : ''; ?>>Training</a></li>
-                    <li><a href="/knowledge" <?php echo ($current_page === 'knowledge') ? 'aria-current="page"' : ''; ?>>Insights</a></li>
+                    <li><a href="/knowledge" <?php echo ($current_page === 'knowledge') ? 'aria-current="page"' : ''; ?>>Knowledge</a></li>
                     <li><a href="/faq" <?php echo ($current_page === 'faq') ? 'aria-current="page"' : ''; ?>>FAQ</a></li>
                     <li><a href="/contact" <?php echo ($current_page === 'contact') ? 'aria-current="page"' : ''; ?>>Contact</a></li>
                 </ul>

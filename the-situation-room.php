@@ -4,7 +4,7 @@ include 'includes/config.php';
 $content = getContentById('the-situation-room');
 
 if (!$content) {
-    header('Location: training.php');
+    header('Location: /training');
     exit;
 }
 

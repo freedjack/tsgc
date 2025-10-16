@@ -1,7 +1,7 @@
 <?php
 
 // SEO settings for training page
-$page_title = 'Training Programs | ';
+$page_title = 'Training Programs';
 $page_description = 'Explore our immersive training programs including cyber security, live TV production, covert operations, and crisis management scenarios.';
 $page_keywords = 'training programs, cyber security training, live TV training, covert operations, crisis management, immersive learning';
 // Let header compute canonical based on request URI
@@ -69,7 +69,7 @@ include 'includes/hero.php';
                 <li><strong>Debrief:</strong> We provide insights and recommendations for ongoing development</li>
             </ol>
             
-            <p><a href="contact.php" class="cta-button">Discuss Your Training Needs</a></p>
+            <p><a href="/contact" class="cta-button">Discuss Your Training Needs</a></p>
         </div>
         
         <div class="image-container">
@@ -113,8 +113,8 @@ include 'includes/hero.php';
         <h2>Ready to Transform Your Training?</h2>
         <p>Contact us to discuss how our immersive training programs can benefit your organization.</p>
         <p>
-            <a href="contact.php" class="cta-button">Get Started</a>
-            <a href="index.php" class="cta-button dt-l-m">Back to Home</a>
+            <a href="/contact" class="cta-button">Get Started</a>
+            <a href="/" class="cta-button dt-l-m">Back to Home</a>
         </p>
     </div>
 </div>

@@ -5,7 +5,7 @@ include 'includes/config.php';
 $content = getContentById('the-hack');
 
 if (!$content) {
-    header('Location: training.php');
+    header('Location: /training');
     exit;
 }
 
@@ -150,8 +150,8 @@ include 'includes/hero.php';
         <h2>Ready to Experience The Hack?</h2>
         <p>Transform your team's understanding of cyber security through immersive, hands-on training.</p>
         <p>
-            <a href="contact.php?training=the-hack" class="cta-button">Book This Training</a>
-            <a href="training.php" class="cta-button dt-l-m">View All Programs</a>
+            <a href="/contact?training=the-hack" class="cta-button">Book This Training</a>
+            <a href="/training" class="cta-button dt-l-m">View All Programs</a>
         </p>
     </div>
 </div>
