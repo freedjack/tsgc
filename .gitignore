@@ -6,3 +6,4 @@ vendor*
 tests
 tests*
 node_modules*
+.DS_Store

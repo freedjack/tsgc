@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
   <url>
     <loc>https://theseriousgamescompany.com/</loc>
     <changefreq>weekly</changefreq>
@@ -13,8 +14,42 @@
   <url>
     <loc>https://theseriousgamescompany.com/contact</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://theseriousgamescompany.com/faq</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Knowledge & Insights -->
+  <url>
+    <loc>https://theseriousgamescompany.com/knowledge</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://theseriousgamescompany.com/knowledge/benefits-of-role-play</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://theseriousgamescompany.com/knowledge/what-is-immersive-training</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://theseriousgamescompany.com/knowledge/designing-effective-scenarios</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://theseriousgamescompany.com/knowledge/facilitation-tips</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Training Programs -->
   <url>
     <loc>https://theseriousgamescompany.com/the-hack</loc>
     <changefreq>monthly</changefreq>

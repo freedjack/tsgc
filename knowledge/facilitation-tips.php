@@ -1,6 +1,6 @@
 <?php
 
-$page_title = 'Facilitation tips | ' . SITE_NAME;
+$page_title = 'Facilitation tips';
 $page_description = 'Practical tips for running live simulations with confidence and impact.';
 
 include __DIR__ . '/../includes/header.php';

@@ -16,7 +16,7 @@ $front_page_training = getFrontPageTraining();
 <?php 
 $hero_image = 'assets/images/optimized/large/jpg/Bomb-defuse-crowd.jpg';
 $hero_title = 'Smart Play';
-$hero_subtitle = "Immersive theatrical roleplay for the real world learning.";
+$hero_subtitle = "Immersive theatrical roleplay for real world learning.";
 include 'includes/hero.php';
 ?>
 
