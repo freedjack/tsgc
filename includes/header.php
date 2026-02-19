@@ -47,7 +47,7 @@ $canonical_url = isset($canonical_url) ? $canonical_url : rtrim(SITE_URL, '/') .
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Roboto+Slab:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     
     <!-- Preload critical resources -->
     <link rel="preload" href="/assets/images/tsgc_logo.png" as="image">
@@ -88,7 +88,8 @@ $canonical_url = isset($canonical_url) ? $canonical_url : rtrim(SITE_URL, '/') .
             <nav class="main-navigation" id="main-navigation" role="navigation" aria-label="Main navigation" aria-expanded="false">
                 <ul class="nav-links">
                     <li><a href="/" <?php echo ($current_page === 'index') ? 'aria-current="page"' : ''; ?>>Home</a></li>
-                    <li><a href="/training" <?php echo ($current_page === 'training') ? 'aria-current="page"' : ''; ?>>Training</a></li>
+                    <li><a href="/training" <?php echo ($current_page === 'training') ? 'aria-current="page"' : ''; ?>>Training Scenarios</a></li>
+                    <li><a href="/public-speaking" <?php echo ($current_page === 'public-speaking') ? 'aria-current="page"' : ''; ?>>Public Speaking</a></li>
                     <li><a href="/knowledge" <?php echo ($current_page === 'knowledge') ? 'aria-current="page"' : ''; ?>>Knowledge</a></li>
                     <li><a href="/faq" <?php echo ($current_page === 'faq') ? 'aria-current="page"' : ''; ?>>FAQ</a></li>
                     <li><a href="/contact" <?php echo ($current_page === 'contact') ? 'aria-current="page"' : ''; ?>>Contact</a></li>

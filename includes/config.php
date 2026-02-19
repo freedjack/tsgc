@@ -1,7 +1,7 @@
 <?php
 // Site Configuration
 define('SITE_URL', 'https://theseriousgamescompany.com');
-define('SITE_DESCRIPTION', 'The Serious Games Company creates engaging, immersive role play, simulations and games for effective learning and skill development in corporate environments.');
+define('SITE_DESCRIPTION', 'Experts in B2B performance training. We use professional actors and immersive simulations to replace theory with high-stakes rehearsal. Safety + Results.');
 
 // Analytics and Forms
 define('GA4_MEASUREMENT_ID', ''); // Add your GA4 Measurement ID here
@@ -12,6 +12,7 @@ $content_items = [
     [
         'id' => 'the-hack',
         'title' => 'Be the hacker',
+        'strapline' => 'Learn about cyber security through hands-on experience.',
         'subtitle' => 'A great way to understand cyber security is to plan a hack',
         'body' => 'Step into the shoes of a hacker and learn about cyber security through hands-on experience. In this immersive training scenario, participants work as part of a red team to identify and exploit vulnerabilities, teaching vital lessons about modern cyber security practices.',
         'image' => 'assets/images/optimized/large/jpg/clint-patterson-hacker.jpg',
@@ -26,6 +27,7 @@ $content_items = [
         'id' => 'live-in-the-morning',
         'category' => 'front-page-training',
         'title' => 'Live in the Morning',
+        'strapline' => 'Build team confidence, improve communication under pressure.',
         'subtitle' => 'Live TV is a fast paced environment. Any thing could happen and it probably will. See how your team handles it.',
         'body' => 'Live in the Morning is a popular moring show. Much loved by pensioners and students alike. But disaster has struck, the crew and presenters have come down with food poisoning after eating chef Joe Blanch\'s special dish. Luckily you have come to save the day but you to get to grips with equipment, studio and guest egos first. Good luck, morning television is relying on you.',
         'image' => 'assets/images/optimized/large/jpg/sam-mcghee-studio.jpg',
@@ -45,6 +47,7 @@ $content_items = [
         'category' => 'front-page-training',
         'title' => 'Covert Operations Training Academy',
         'subtitle' => 'Learn the skills of a spy and how to use them to save the world.',
+        'strapline' => 'Improve communication and confidence.',
         'body' => 'Step into the world of espionage and learn critical skills through immersive role-play scenarios.',
         'image' => 'assets/images/optimized/large/jpg/spy-lld.jpg',
         'thumb' => 'assets/images/optimized/thumb/jpg/spy-lld.jpg',
@@ -56,9 +59,30 @@ $content_items = [
         ]
     ],
     [
+        'id' => 'public-speaking',
+        'category' => 'front-page-training',
+        'title' => 'Public Speaking',
+        'strapline' => 'Stop presenting. Start commanding the room.',
+        'subtitle' => 'It\'s Not About the Slide Deck',
+        'body' => 'Most public speaking training focuses on the content. We focus on the instrument: You. Using techniques from the theatre, we train executives to find their authentic voice, manage performance anxiety, and hold an audience in the palm of their hand. Whether it\'s a board meeting or a keynote to thousands, the principles of presence remain the same.',
+        'image' => 'assets/images/optimized/large/jpg/OnPodium.jpg',
+        'thumb' => 'assets/images/optimized/large/jpg/OnPodium.jpg',
+        'outcomes' => [
+            'Public speaking',
+            'Confidence',
+            'Communication',
+            'Leadership',
+            'Problem solving',
+            'Stress management',
+            'Decision making'
+        ]
+    ],
+
+    [
         'id' => 'the-situation-room',
         'category' => 'front-page-training',
         'title' => 'The Situation Room',
+        'strapline' => 'Learn to handle high-pressure situations.',
         'subtitle' => 'Some call it The Crisis Chamber. Others call it The Stress Suite. Step into a series of diverse, high-pressure scenarios and put your skills to the test. Don\'t worry—it\'s safe. We promise.',
         'body' => 'We have created a series of different scenarios to test the skills of your team in a safe and controlled environment. Using cctv cameras and microphones we then review the performance of the team allowing them to learn from their mistakes and improve their skills.',
         'image' => 'assets/images/optimized/large/jpg/room-with-tables.jpg',

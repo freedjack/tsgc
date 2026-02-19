@@ -1,9 +1,9 @@
 <?php
 
 // SEO settings for contact page
-$page_title = 'Contact Us';
-$page_description = 'Get in touch with The Serious Games Company to discuss your training needs. We\'re here to help transform your team\'s learning experience.';
-$page_keywords = 'contact, training inquiry, serious games contact, corporate training consultation';
+$page_title = 'Contact Us | Book a Discovery Call';
+$page_description = 'Get in touch to discuss bespoke roleplay training, medical simulation, or leadership workshops. Design a scenario for your specific challenges.';
+$page_keywords = 'contact serious games, book discovery call, corporate training inquiry, bespoke training consultation';
 // Let header compute canonical based on request URI
 
 include 'includes/header.php';

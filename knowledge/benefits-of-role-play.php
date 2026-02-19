@@ -25,7 +25,7 @@ include __DIR__ . '/../includes/hero.php';
 
       <p>You can also role-play with multiple people, such as coordinating roles on a film set. Who needs what? What task should I focus on first? What's the weather like? You need to delegate, cooperate, and streamline productivity—because "the film budget is getting outta control!" These skills you are learning are transferable. You are building tools that you can use in your own life and work. By expanding your imagination you are being more creative in your problem solving and efficiently.</p>
 
-      <p>As well as being productive, any role playing experience is usually fun and silly. Because you can make mistakes, say the wrong things, cause disaster and it doesn't matter. In fact that's the point! Best way to learn is from your mistakes! And all the better in a safe and secure environment.</p>
+      <p>As well as being productive, any role playing experience is essentially playful. Because you can make mistakes, say the wrong things, cause disaster and it doesn't matter. In fact that's the point! Best way to learn is from your mistakes! And all the better in a safe and secure environment.</p>
 
       <p>To deepen your understanding, you can replay the same situation from different perspectives. Imagine experiencing a hospital ward as a doctor, a cleaner, and a patient. Each role gives you a new layer of insight, helping you see the bigger picture and discover ways to improve the system.</p>
 

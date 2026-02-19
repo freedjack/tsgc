@@ -1,9 +1,9 @@
 <?php
 
 // SEO settings for training page
-$page_title = 'Training Programs';
-$page_description = 'Explore our immersive training programs including cyber security, live TV production, covert operations, and crisis management scenarios.';
-$page_keywords = 'training programs, cyber security training, live TV training, covert operations, crisis management, immersive learning';
+$page_title = 'Corporate Training Workshops | Immersive Scenarios';
+$page_description = 'Explore our practical training scenarios: Cyber Security, Crisis Management (The Situation Room), and Covert Operations leadership training.';
+$page_keywords = 'corporate training workshops, immersive training scenarios, cyber security role play, crisis management training';
 // Let header compute canonical based on request URI
 
 include 'includes/header.php';
@@ -19,33 +19,32 @@ include 'includes/hero.php';
 
 <!-- Training Programs Grid -->
 <div class="container">
-    <div class="content-grid">
-        <?php foreach ($content_items as $item): ?>
-            <div class="content-card image-card">
+    <div class="service-grid">
+        <?php foreach ($content_items as $index => $item): ?>
+            <div class="service-card <?php echo ($index === count($content_items) - 1 && count($content_items) % 2 === 1) ? 'last-item' : ''; ?>">
                 <?php if (isset($item['thumb'])): ?>
                     <?php render_picture($item['thumb'], $item['title'], '', [ 'sizes' => '(min-width: 968px) 400px, 100vw' ]); ?>
                 <?php endif; ?>
                 
                 <div class="content-card-content">
-                    <h2><a href="<?php echo htmlspecialchars($item['id']); ?>"><?php echo htmlspecialchars($item['title']); ?></a></h2>
-                    <h3><?php echo htmlspecialchars($item['subtitle']); ?></h3>
-                    
-                    <p><?php echo htmlspecialchars($item['body']); ?></p>
+                    <?php if (isset($item['strapline'])): ?>
+                        <h5><?php echo htmlspecialchars($item['strapline']); ?></h5>
+                    <?php endif; ?>
+                    <h3><a href="<?php echo htmlspecialchars($item['id']); ?>"><?php echo htmlspecialchars($item['title']); ?></a></h3>
+                    <div class="tag"><?php echo htmlspecialchars($item['subtitle'] ?? ''); ?></div>
                     
                     <?php if (isset($item['outcomes']) && !empty($item['outcomes'])): ?>
                         <div class="outcomes">
-                            <h4>Learning Outcomes</h4>  
-                            <ul>
-                                <?php foreach ($item['outcomes'] as $outcome): ?>
-                                    <li><?php echo htmlspecialchars($outcome); ?></li>      
-                                <?php endforeach; ?>
-                            </ul>
+                            <h4>Outcomes</h4>  
+                            <?php foreach ($item['outcomes'] as $outcome): ?>
+                                <div><?php echo htmlspecialchars($outcome); ?></div>      
+                            <?php endforeach; ?>
                         </div>
                     <?php endif; ?>
                     
                     <div class="flex-spacer"></div>
-                    <a href="<?php echo htmlspecialchars($item['id']); ?>" class="cta-button">
-                        Learn More
+                    <a href="<?php echo htmlspecialchars($item['id']); ?>" class="btn-primary" style="margin-top: 1rem;">
+                        Find out more
                     </a>
                 </div>
             </div>

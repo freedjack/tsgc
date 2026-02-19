@@ -1,0 +1,45 @@
+<?php
+
+$page_title = 'Who the F is The Serious Games Company?';
+$page_description = 'A story about a theatre group that became experts in immersive theatrical role play training.';
+
+include __DIR__ . '/../includes/header.php';
+?>
+
+<?php 
+$hero_image = 'assets/images/optimized/large/jpg/SCIENTISTS.jpg';
+$hero_title = 'Who the F is The Serious Games Company?';
+$hero_subtitle = 'A story about a theatre group that became experts in immersive theatrical role play training';
+include __DIR__ . '/../includes/hero.php';
+?>
+
+<div class="content-card container">
+    <div class="text-content">
+        <h2>Its an act</h2>
+            <p>Immersive training places people into realistic scenarios to practice skills in a safe environment. Rather than telling people what to do, it lets them try, reflect, and improve — making learning memorable and applicable.</p>
+
+        <h2>Core principles</h2>
+        <div class="outcomes">
+            <div><strong>Active learning:</strong> learn by doing, not just listening</div>
+            <div><strong>Psychological safety:</strong> fail safely and try again</div>
+            <div><strong>Immediate feedback:</strong> debrief soon after action</div>
+        </div>
+
+        <h2>Why it works</h2>
+        <p>When people experience a challenge, make decisions and see the outcomes, they retain more and transfer those lessons to real work faster. The combination of practice and structured debrief is key.</p>
+    </div>
+</div>
+
+<div class="content-card container">
+    <div class="text-content" style="text-align:center;">
+        <h2>Explore more insights</h2>
+        <p>
+            <a class="cta-button" href="/knowledge">Back to Insights</a>
+            <a class="cta-button dt-l-m" href="/contact">Talk to us</a>
+        </p>
+    </div>
+</div>
+
+<?php include __DIR__ . '/../includes/footer.php'; ?>
+
+

@@ -1,8 +1,8 @@
 <?php
 
 // SEO
-$page_title = 'FAQ';
-$page_description = 'Answers to common questions about our immersive training, logistics, and how we work.';
+$page_title = 'FAQ | Serious Games Training Logistics';
+$page_description = 'Common questions about our corporate training: Group sizes, locations (UK-wide), customized scenarios, and ROI measurement.';
 
 include 'includes/header.php';
 ?>
@@ -14,11 +14,11 @@ $hero_subtitle = 'Everything you need to know about our training';
 include 'includes/hero.php';
 ?>
 
-<div class="content-card container">
-    <div class="faq-grid">
+<div class="content-card">
+    <div class=" container">
         <div class="faq-item" id="faq-duration">
             <h3>How long does a typical training session last?</h3>
-            <p>Our training sessions can range from half-day intensive workshops to multi-day comprehensive programs, depending on your needs and objectives.</p>
+            <p>Our training sessions can range from an hour long workshops to multi-day comprehensive programs, depending on your needs and objectives.</p>
         </div>
         <div class="faq-item" id="faq-location">
             <h3>Where do the training sessions take place?</h3>
