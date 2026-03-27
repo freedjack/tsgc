@@ -46,31 +46,35 @@ include __DIR__ . '/../../app/views/partials/hero.php';
 ?>
 
 <!-- Client testimonial -->
-<section class="testimonial-ps" aria-label="Client testimonial">
-    <div class="container">
-        <div class="testimonial-ps__journey" aria-hidden="true">
-            <div class="testimonial-ps__step">
-                <span class="testimonial-ps__label">Before</span>
-                <span class="testimonial-ps__jtext">Daunting once-in-a-lifetime pitch</span>
+<section class="testimonial-ps" aria-labelledby="testimonial-ps-heading">
+    <div class="container compact-section">
+        <figure class="content-card testimonial-ps__figure">
+            <h2 id="testimonial-ps-heading" class="testimonial-ps__title">Don't take our word for it</h2>
+            <div class="testimonial-ps__journey" aria-hidden="true">
+                <div class="testimonial-ps__step">
+                    <span class="testimonial-ps__label">Before</span>
+                    <span class="testimonial-ps__jtext">Daunting once-in-a-lifetime pitch</span>
+                </div>
+                <span class="testimonial-ps__arrow" aria-hidden="true">→</span>
+                <div class="testimonial-ps__step">
+                    <span class="testimonial-ps__label">During</span>
+                    <span class="testimonial-ps__jtext">Intensive coaching on script &amp; delivery</span>
+                </div>
+                <span class="testimonial-ps__arrow" aria-hidden="true">→</span>
+                <div class="testimonial-ps__step">
+                    <span class="testimonial-ps__label">After</span>
+                    <span class="testimonial-ps__jtext">European grant secured</span>
+                </div>
             </div>
-            <span class="testimonial-ps__arrow" aria-hidden="true">→</span>
-            <div class="testimonial-ps__step">
-                <span class="testimonial-ps__label">During</span>
-                <span class="testimonial-ps__jtext">Intensive coaching on script &amp; delivery</span>
-            </div>
-            <span class="testimonial-ps__arrow" aria-hidden="true">→</span>
-            <div class="testimonial-ps__step">
-                <span class="testimonial-ps__label">After</span>
-                <span class="testimonial-ps__jtext">European grant secured</span>
-            </div>
-        </div>
 
-        <figure class="testimonial-ps__figure">
-            <div class="testimonial-ps__badge">European grant secured</div>
-            <blockquote class="testimonial-ps__pull" cite="https://theseriousgamescompany.com/public-speaking">
-                <span class="sr-only">Jeff Ive, CTO at Adaptavate, said: </span>
-                &ldquo;Dave makes dreams reality.&rdquo;
-            </blockquote>
+            <div class="testimonial-ps__lead">
+                <span class="testimonial-ps__badge">European grant secured</span>
+                <blockquote class="testimonial-ps__pull" cite="https://theseriousgamescompany.com/public-speaking">
+                    <span class="sr-only">Jeff Ive, CTO at Adaptavate, said: </span>
+                    &ldquo;Dave makes dreams reality.&rdquo;
+                </blockquote>
+            </div>
+
             <p class="testimonial-ps__body">
                 &ldquo;I worked with Dave in an intense period to hone my script and perfect my delivery.
                 The pointers he shared will be helpful for life &mdash; across all forms of communication,
@@ -79,6 +83,7 @@ include __DIR__ . '/../../app/views/partials/hero.php';
                 because we were successful in our funding pitch. Dave&rsquo;s help has been catalytic in getting
                 an idea I&rsquo;ve worked on for years finally funded.&rdquo;
             </p>
+
             <figcaption class="testimonial-ps__attr">
                 <div class="testimonial-ps__avatar" aria-hidden="true">JI</div>
                 <div>

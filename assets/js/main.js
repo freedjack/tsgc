@@ -201,8 +201,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     }
     
-    // Add loading states to buttons
-    document.querySelectorAll('.cta-button').forEach(button => {
+    // Loading state only for real buttons (not <a class="cta-button">), so nav links do not flash or resize on click
+    document.querySelectorAll('button.cta-button').forEach(button => {
         button.addEventListener('click', function() {
             if (!this.classList.contains('loading')) {
                 this.classList.add('loading');

@@ -28,10 +28,10 @@ include __DIR__ . '/../../app/views/partials/hero.php';
                 
                 <div class="content-card-content">
                     <?php if (isset($item['strapline'])): ?>
-                        <h5><?php echo htmlspecialchars($item['strapline']); ?></h5>
+                        <h5 class="tag"><?php echo htmlspecialchars($item['strapline']); ?></h5>
                     <?php endif; ?>
                     <h3><a href="<?php echo htmlspecialchars($item['id']); ?>"><?php echo htmlspecialchars($item['title']); ?></a></h3>
-                    <div class="tag"><?php echo htmlspecialchars($item['subtitle'] ?? ''); ?></div>
+                    <p><?php echo htmlspecialchars($item['subtitle'] ?? ''); ?></p>
                     
                     <?php if (isset($item['outcomes']) && !empty($item['outcomes'])): ?>
                         <div class="outcomes">

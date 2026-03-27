@@ -2,56 +2,81 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Pages -->
   <url>
-    <loc>https://theseriousgamescompany.com/</loc>
+    <loc>https://theseriousgamescompany.co.uk/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://theseriousgamescompany.com/training</loc>
+    <loc>https://theseriousgamescompany.co.uk/training</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://theseriousgamescompany.com/contact</loc>
+    <loc>https://theseriousgamescompany.co.uk/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://theseriousgamescompany.com/faq</loc>
+    <loc>https://theseriousgamescompany.co.uk/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <!-- Knowledge & Insights -->
   <url>
-    <loc>https://theseriousgamescompany.com/knowledge</loc>
+    <loc>https://theseriousgamescompany.co.uk/knowledge</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://theseriousgamescompany.com/knowledge/benefits-of-role-play</loc>
+    <loc>https://theseriousgamescompany.co.uk/knowledge/roleplay-benefits</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://theseriousgamescompany.co.uk/knowledge/benefits-of-role-play</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
-  <!-- Training Programs -->
+  <!-- Training Programs (scenario & service pages) -->
   <url>
-    <loc>https://theseriousgamescompany.com/the-hack</loc>
+    <loc>https://theseriousgamescompany.co.uk/the-hack</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theseriousgamescompany.com/live-in-the-morning</loc>
+    <loc>https://theseriousgamescompany.co.uk/live-in-the-morning</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theseriousgamescompany.com/covert-operations-training-academy</loc>
+    <loc>https://theseriousgamescompany.co.uk/covert-operations-training-academy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theseriousgamescompany.com/the-situation-room</loc>
+    <loc>https://theseriousgamescompany.co.uk/public-speaking</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://theseriousgamescompany.co.uk/the-situation-room</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://theseriousgamescompany.co.uk/the-rehearsal-room</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://theseriousgamescompany.co.uk/medical-simulation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://theseriousgamescompany.co.uk/difficult-conversations</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

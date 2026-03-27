@@ -26,7 +26,8 @@ include __DIR__ . '/../../app/views/partials/trust-bar.php';
     <div class="content-card">
         <div class="flex-container">
             <div class="text-content">
-            <h2>Traditional training is static. The real world is dynamic. We use immersive theatre and live scenarios to train your team for the unscripted challenges ahead.</h2>
+            <h2>Traditional training is static. The real world is dynamic.</h2>
+            <h2  class="home-intro-lede">We use immersive theatre and live scenarios to train your team for the unscripted challenges ahead.</h2>
                 <p>Wheter you want to build team confidence, train for a difficult conversation or just want to nail your next pitch, we can help you.</p>
                 <p>Participants make mistakes privately, learn fast, and build instincts that hold when it matters. It’s playful, intense, and deeply human. Because the brain remembers experiences, not bullet points.</p>
             </div>

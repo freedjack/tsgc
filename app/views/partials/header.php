@@ -68,9 +68,6 @@ $canonical_url = isset($canonical_url) ? $canonical_url : rtrim(SITE_URL, '/') .
     <link rel="preload" href="/<?php echo ltrim($hero_image, '/'); ?>" as="image" fetchpriority="high">
     <?php endif; ?>
 
-    <!-- Alpine.js -->
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    
     <!-- Analytics -->
     <?php include __DIR__ . '/analytics.php'; ?>
 </head>
