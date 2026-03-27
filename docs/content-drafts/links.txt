@@ -1,0 +1,13 @@
+      <div class="content-card">
+            <h2>What is Immersive Training?</h2>
+            <p>Discover the fundamentals of immersive training and why it's so effective for skill development and team building.</p>
+            <p><strong>Key Topics:</strong> Learning by doing, experiential learning, role-play benefits</p>
+            <a href="/knowledge/what-is-immersive-training" class="cta-button">Read Article</a>
+        </div>
+
+        <div class="content-card">
+            <h2>Designing Effective Scenarios</h2>
+            <p>Learn the art and science of creating engaging training scenarios that maximize learning outcomes.</p>
+            <p><strong>Key Topics:</strong> Scenario design principles, engagement techniques, learning objectives</p>
+            <a href="/knowledge/designing-effective-scenarios" class="cta-button">Read Article</a>
+        </div>

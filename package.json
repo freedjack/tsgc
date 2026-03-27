@@ -11,24 +11,15 @@
   "devDependencies": {
     "browser-sync": "^2.29.3"
   },
-  "keywords": ["php", "website", "browsersync", "development"],
+  "keywords": [
+    "php",
+    "website",
+    "browsersync",
+    "development"
+  ],
   "author": "",
-  "license": "ISC"
-}
-{
-  "name": "tsgc-website",
-  "version": "1.0.0",
-  "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch"
-  },
-  "devDependencies": {
-    "jest": "^29.0.0"
-  },
-  "jest": {
-    "testEnvironment": "jsdom",
-    "modulePaths": [
-      "assets/js"
-    ]
+  "license": "ISC",
+  "dependencies": {
+    "alpinejs": "^3.15.0"
   }
 }

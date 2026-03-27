@@ -33,21 +33,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://theseriousgamescompany.com/knowledge/what-is-immersive-training</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://theseriousgamescompany.com/knowledge/designing-effective-scenarios</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://theseriousgamescompany.com/knowledge/facilitation-tips</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
   
   <!-- Training Programs -->
   <url>

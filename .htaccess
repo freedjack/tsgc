@@ -1,5 +1,11 @@
 RewriteEngine On
 
+# Use custom site 404 route
+ErrorDocument 404 /404
+
+# Deny direct web access to internal application and non-runtime directories
+RewriteRule ^(?:app|pages|docs|scripts|archive)/ - [F,L]
+
 # Redirect index.php to root
 RewriteRule ^index\.php$ / [R=301,L]
 
@@ -8,8 +14,60 @@ RewriteCond %{THE_REQUEST} \s/([^.\s?]+)\.php[\s?] [NC]
 RewriteCond %1 !index$ [NC]
 RewriteRule ^ %1 [R=301,L]
 
-# Internally rewrite clean URLs to their PHP counterparts
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([A-Za-z0-9\-_]+)/?$ $1.php [L,QSA]
+# Home route
+RewriteRule ^$ pages/core/index.php [L,QSA]
+
+# Knowledge section routes
+RewriteRule ^knowledge/?$ pages/knowledge/index.php [L,QSA]
+RewriteCond %{DOCUMENT_ROOT}/pages/knowledge/$1.php -f
+RewriteRule ^knowledge/([^/]+)/?$ pages/knowledge/$1.php [L,QSA]
+
+# Core routes
+RewriteCond %{DOCUMENT_ROOT}/pages/core/$1.php -f
+RewriteRule ^([^/]+)/?$ pages/core/$1.php [L,QSA]
+
+# Training detail routes
+RewriteCond %{DOCUMENT_ROOT}/pages/training/$1.php -f
+RewriteRule ^([^/]+)/?$ pages/training/$1.php [L,QSA]
+
+# ── Gzip / Deflate compression ──
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+    AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
+    AddOutputFilterByType DEFLATE application/json application/ld+json
+    AddOutputFilterByType DEFLATE application/xml application/xhtml+xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE font/woff2 application/font-woff2
+</IfModule>
+
+# ── Browser caching ──
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault                          "access plus 1 month"
+    ExpiresByType text/html                 "access plus 0 seconds"
+    ExpiresByType text/css                  "access plus 1 year"
+    ExpiresByType text/javascript           "access plus 1 year"
+    ExpiresByType application/javascript    "access plus 1 year"
+    ExpiresByType image/jpeg                "access plus 1 year"
+    ExpiresByType image/png                 "access plus 1 year"
+    ExpiresByType image/gif                 "access plus 1 year"
+    ExpiresByType image/webp                "access plus 1 year"
+    ExpiresByType image/avif                "access plus 1 year"
+    ExpiresByType image/svg+xml             "access plus 1 year"
+    ExpiresByType image/x-icon              "access plus 1 year"
+    ExpiresByType font/woff2                "access plus 1 year"
+    ExpiresByType application/font-woff2    "access plus 1 year"
+</IfModule>
+
+# Cache-Control fallback (for servers without mod_expires)
+<IfModule mod_headers.c>
+    # HTML: no cache (always fresh)
+    <FilesMatch "\.(html|php)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+    </FilesMatch>
+    # Static assets: immutable with cache-busting query strings
+    <FilesMatch "\.(css|js|jpg|jpeg|png|gif|webp|avif|svg|ico|woff2)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
 

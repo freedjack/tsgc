@@ -15,6 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const isExpanded = this.getAttribute('aria-expanded') === 'true';
             this.setAttribute('aria-expanded', !isExpanded);
             mainNavigation.setAttribute('aria-expanded', !isExpanded);
+
+            if (!isExpanded) {
+                const firstLink = mainNavigation.querySelector('a[href]');
+                if (firstLink) firstLink.focus();
+            } else {
+                mobileMenuToggle.focus();
+            }
         });
         
         // Close mobile menu when clicking outside
@@ -58,6 +65,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Video facade: load Vimeo iframe only on user interaction
+    document.querySelectorAll('.video-facade').forEach(function(facade) {
+        function loadVideo() {
+            var id = facade.dataset.vimeoId;
+            var hash = facade.dataset.vimeoHash;
+            if (!id) return;
+            var src = 'https://player.vimeo.com/video/' + id +
+                      '?h=' + (hash || '') + '&autoplay=1&dnt=1';
+            var iframe = document.createElement('iframe');
+            iframe.setAttribute('src', src);
+            iframe.setAttribute('title', facade.getAttribute('aria-label') || 'Video');
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media');
+            iframe.setAttribute('allowfullscreen', '');
+            iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border-radius:8px';
+            facade.replaceWith(iframe);
+        }
+        facade.addEventListener('click', loadVideo);
+        facade.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                loadVideo();
+            }
+        });
+    });
+
     // Lazy loading for images
     if ('IntersectionObserver' in window) {
         const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -193,6 +226,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (e.key === 'Escape' && mobileMenuToggle && mainNavigation) {
             mobileMenuToggle.setAttribute('aria-expanded', 'false');
             mainNavigation.setAttribute('aria-expanded', 'false');
+            mobileMenuToggle.focus();
         }
     });
     
