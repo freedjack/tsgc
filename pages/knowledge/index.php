@@ -21,10 +21,10 @@ include __DIR__ . '/../../app/views/partials/hero.php';
 <div class="container">
     <div class="content-grid">
         <div class="content-card">
-            <h2><a href="/knowledge/serious-games">The Science of Play—Why Your Career Depends on It</a></h2>
+            <h2><a href="/knowledge/roleplay-benefits">The Science of Play—Why Your Career Depends on It</a></h2>
             <p>Unlock your brain's "play" mode. Science shows the most successful tinkerers, creatives, and leaders never stopped playing. Play rewires your prefrontal cortex for better decision-making, creativity, and emotional intelligence.</p>
             <p><strong>Key Topics:</strong> Neuroplasticity, play, leadership, cognitive flexibility, Huberman Lab</p>
-            <a href="/knowledge/serious-games" class="cta-button">Read Article</a>
+            <a href="/knowledge/roleplay-benefits" class="cta-button">Read Article</a>
         </div>
   
         <div class="content-card">

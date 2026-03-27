@@ -19,6 +19,7 @@ RewriteRule ^$ pages/core/index.php [L,QSA]
 
 # Knowledge section routes
 RewriteRule ^knowledge/?$ pages/knowledge/index.php [L,QSA]
+RewriteRule ^knowledge/serious-games/?$ /knowledge/roleplay-benefits [R=301,L]
 RewriteCond %{DOCUMENT_ROOT}/pages/knowledge/$1.php -f
 RewriteRule ^knowledge/([^/]+)/?$ pages/knowledge/$1.php [L,QSA]
 

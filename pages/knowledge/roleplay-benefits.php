@@ -5,20 +5,20 @@ $article = [
     'headline' => $page_title,
 
     'image' => '/assets/images/optimized/large/jpg/room-with-tables.jpg',
-    'mainEntityOfPage' => '/knowledge/serious-games',
+    'mainEntityOfPage' => '/knowledge/roleplay-benefits',
 ];
 
 include __DIR__ . '/../../app/views/partials/header.php';
 ?>
 
-<?php 
+<?php
 $hero_image = 'assets/images/optimized/large/jpg/room-with-tables.jpg';
-$hero_title = 'The Science of Play—Why its serious';
+$hero_title = 'The Science of Play—Why it\'s serious';
 $hero_subtitle = 'Unlock Your Brain\'s "Play" Mode';
 include __DIR__ . '/../../app/views/partials/hero.php';
 ?>
 
-<div class="content-card container">
+<div class="content-card container knowledge-article">
     <div class="text-content">
         <p>Are you working harder but thinking smaller? Science shows that the most successful "tinkerers," creatives, and leaders have one thing in common: they never stopped playing. Play isn't just for the playground—it's a high-level biological state that rewires your prefrontal cortex for better decision-making, creativity, and emotional intelligence.</p>
         <p>Ready to upgrade your executive function? Stop viewing play as a distraction and start seeing it as your most powerful tool for professional growth.</p>

@@ -4,6 +4,36 @@ $page_title = 'Public Speaking Training | Presence & Influence';
 $page_description = 'Public speaking skills: Learn to speak publicly with confidence and ease. Transform your presentation with actor-led training.';
 $page_keywords = 'public speaking, presentation skills, executive presence, voice coaching, storytelling, keynote training';
 
+$additional_jsonld = [
+    '@context' => 'https://schema.org',
+    '@type' => 'Review',
+    'itemReviewed' => [
+        '@type' => 'Service',
+        'name' => 'Public Speaking Training',
+        'provider' => [
+            '@type' => 'Organization',
+            'name' => 'The Serious Games Company',
+            'url' => 'https://theseriousgamescompany.com/public-speaking',
+        ],
+    ],
+    'reviewRating' => [
+        '@type' => 'Rating',
+        'ratingValue' => '5',
+        'bestRating' => '5',
+    ],
+    'author' => [
+        '@type' => 'Person',
+        'name' => 'Jeff Ive',
+        'jobTitle' => 'CTO',
+        'worksFor' => [
+            '@type' => 'Organization',
+            'name' => 'Adaptavate',
+        ],
+    ],
+    'reviewBody' => 'I worked with Dave in an intense period to hone my script and perfect my delivery. The pointers he shared will be helpful for life — across all forms of communication, and particularly public speaking. With his help, I was able to turn a daunting prospect into a moment I genuinely enjoyed. That enjoyment must have transferred to the jury, because we were successful in our funding pitch. Dave\'s help has been catalytic in getting an idea I\'ve worked on for years finally funded.',
+    'datePublished' => '2026-03-27',
+];
+
 include __DIR__ . '/../../app/views/partials/header.php';
 ?>
 
@@ -14,6 +44,52 @@ $hero_title = 'Presence & Influence';
 $hero_subtitle = 'Learn to present like a TED talk';
 include __DIR__ . '/../../app/views/partials/hero.php';
 ?>
+
+<!-- Client testimonial -->
+<section class="testimonial-ps" aria-label="Client testimonial">
+    <div class="container">
+        <div class="testimonial-ps__journey" aria-hidden="true">
+            <div class="testimonial-ps__step">
+                <span class="testimonial-ps__label">Before</span>
+                <span class="testimonial-ps__jtext">Daunting once-in-a-lifetime pitch</span>
+            </div>
+            <span class="testimonial-ps__arrow" aria-hidden="true">→</span>
+            <div class="testimonial-ps__step">
+                <span class="testimonial-ps__label">During</span>
+                <span class="testimonial-ps__jtext">Intensive coaching on script &amp; delivery</span>
+            </div>
+            <span class="testimonial-ps__arrow" aria-hidden="true">→</span>
+            <div class="testimonial-ps__step">
+                <span class="testimonial-ps__label">After</span>
+                <span class="testimonial-ps__jtext">European grant secured</span>
+            </div>
+        </div>
+
+        <figure class="testimonial-ps__figure">
+            <div class="testimonial-ps__badge">European grant secured</div>
+            <blockquote class="testimonial-ps__pull" cite="https://theseriousgamescompany.com/public-speaking">
+                <span class="sr-only">Jeff Ive, CTO at Adaptavate, said: </span>
+                &ldquo;Dave makes dreams reality.&rdquo;
+            </blockquote>
+            <p class="testimonial-ps__body">
+                &ldquo;I worked with Dave in an intense period to hone my script and perfect my delivery.
+                The pointers he shared will be helpful for life &mdash; across all forms of communication,
+                and particularly public speaking. With his help, I was able to turn a daunting prospect
+                into a moment I genuinely enjoyed. That enjoyment must have transferred to the jury,
+                because we were successful in our funding pitch. Dave&rsquo;s help has been catalytic in getting
+                an idea I&rsquo;ve worked on for years finally funded.&rdquo;
+            </p>
+            <figcaption class="testimonial-ps__attr">
+                <div class="testimonial-ps__avatar" aria-hidden="true">JI</div>
+                <div>
+                    <span class="testimonial-ps__name">Jeff Ive</span>
+                    <span class="testimonial-ps__role">CTO</span>
+                    <span class="testimonial-ps__company">Adaptavate</span>
+                </div>
+            </figcaption>
+        </figure>
+    </div>
+</section>
 
 <!-- Introduction -->
 <div class="container">

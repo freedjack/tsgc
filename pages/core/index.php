@@ -65,7 +65,7 @@ include __DIR__ . '/../../app/views/partials/trust-bar.php';
                 <p>In the modern professional world, we often view "play" as the antithesis of "productivity." We equate maturity with rigidity and seriousness. However, neurobiology tells a different story. According to Stanford Professor Andrew Huberman, play is not a luxury; it is the "most powerful portal to neuroplasticity" available to the human brain throughout its entire lifespan.</p>
                 </div>
                 <div>
-                    <a href="/knowledge/serious-games" class="cta-button">Read more about the research into the benefits of play</a>
+                    <a href="/knowledge/roleplay-benefits" class="cta-button">Read more about the research into the benefits of play</a>
                     
                 </div>
                 </div>
@@ -83,7 +83,7 @@ include __DIR__ . '/../../app/views/partials/trust-bar.php';
     
     <div class="service-grid">
         <?php foreach ($front_page_training as $index => $item): ?>
-            <div class="service-card <?php echo ($index === count($front_page_training) && count($front_page_training) % 2 === 1) ? 'last-item' : ''; ?>">
+            <div class="service-card <?php echo ($index === count($front_page_training) - 1 && count($front_page_training) % 2 === 1) ? 'last-item' : ''; ?>">
                 <?php if (isset($item['thumb'])): ?>
                     <a href="<?php echo htmlspecialchars($item['id']); ?>"><?php render_picture($item['thumb'], $item['title'], '', [ 'sizes' => '(min-width: 968px) 400px, 100vw' ]); ?></a>
                 <?php endif; ?>
