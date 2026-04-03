@@ -1,7 +1,7 @@
 <?php
 // SEO settings
-$page_title = 'Public Speaking Training | Presence & Influence';
-$page_description = 'Public speaking skills: Learn to speak publicly with confidence and ease. Transform your presentation with actor-led training.';
+$page_title = 'Public Speaking Training Bristol | Dave Lovatt | The Serious Games Company';
+$page_description = 'A 1-day public speaking intensive in Bristol led by theatre director Dave Lovatt. Acting techniques for executives, leaders and teams. £450 — 50% off for charities, SMEs and CICs.';
 $page_keywords = 'public speaking, presentation skills, executive presence, voice coaching, storytelling, keynote training';
 
 $additional_jsonld = [
@@ -40,8 +40,8 @@ include __DIR__ . '/../../app/views/partials/header.php';
 <!-- Hero Section -->
 <?php 
 $hero_image = 'assets/images/optimized/large/jpg/OnPodium.jpg'; 
-$hero_title = 'Presence & Influence';
-$hero_subtitle = 'Learn to present like a TED talk';
+$hero_title = 'Public Speaking Training Bristol';
+$hero_subtitle = 'Training drawn from 20 years of professional theatre - not presentation theory.';
 include __DIR__ . '/../../app/views/partials/hero.php';
 ?>
 
@@ -101,14 +101,45 @@ include __DIR__ . '/../../app/views/partials/hero.php';
     <div class="content-card">
         <div class="text-content">
             <h2>It's Not About the Slide Deck</h2>
-            <p>Most public speaking training focuses on the content. We focus on the instrument: You.</p>
-            <p>Using techniques from drama and theatre, we can train you and your team to find their authentic voice, manage performance anxiety, and hold an audience in the palm of your hand. Whether it's a board meeting or a keynote to thousands, the principles of presence remain the same.</p>
+            <p>Most public speaking training focuses on the content. We focus on the instrument: you.</p>
+            <p>Using techniques drawn from acting, we train you to find your authentic voice, manage performance anxiety, and hold a room - whether that's a board meeting or a keynote to thousands. The principles remain the same.</p>
+        </div>
+    </div>
+</div>
+
+<!-- 1-Day Workshop Product Block -->
+<div class="container">
+    <div class="content-card ps-workshop-card">
+        <div class="text-content">
+            <h2>Power Up Your Public Speaking - 1-day intensive</h2>
+            <p><strong>Led by Dave Lovatt</strong><br>In person &middot; Bristol, UK<br>One day. Real technique. Permanent change.</p>
+            <ul>
+                <li><strong>Format:</strong> In person, full day</li>
+                <li><strong>Location:</strong> Bristol, UK</li>
+                <li><strong>Price:</strong> £450 per person</li>
+            </ul>
+            <div class="ps-workshop-discount" role="region" aria-label="Discount for charities, SMEs and CICs">
+                <p class="ps-workshop-discount__lead"><strong>Charity, SME or CIC?</strong><br>50% off - £225 per person</p>
+                <p class="ps-workshop-discount__note">Applies to registered charities, SMEs (under 50 employees) and Community Interest Companies.</p>
+            </div>
+            <a href="https://tidycal.com/freedjack/book-a-call" class="cta-button" rel="noopener noreferrer" target="_blank">Book a call</a>
+        </div>
+    </div>
+</div>
+
+<!-- About Dave -->
+<div class="container">
+    <div class="content-card">
+        <div class="text-content">
+            <h2>Dave Lovatt</h2>
+            <p>Dave has spent over 20 years in professional theatre - directing, performing, and teaching. He trained under the Head of the Directors Guild UK, and has worked with executives, founders and senior leaders across the UK and Europe.</p>
+            <p>The techniques he uses don't come from the corporate training world. They come from actors who have to hold a room every night, without a safety net. That's a different standard - and it produces different results.</p>
         </div>
     </div>
 </div>
 
 <!-- Our Method -->
-<div class="content-card container" style="background-color: var(--bg-secondary);">
+<div class="content-card container">
     <div class="flex-container">
         <div class="text-content">
             <h2>Our Method</h2>
@@ -149,13 +180,31 @@ include __DIR__ . '/../../app/views/partials/hero.php';
                     <li><strong>Senior Leadership:</strong> For high-stakes keynotes and town halls.</li>
                     <li><strong>Sales Teams:</strong> For pitching and client presentations.</li>
                     <li><strong>Emerging Leaders:</strong> Building confidence and authority.</li>
+                    <li><strong>Charity &amp; CIC Leaders:</strong> Communicating mission and securing funding.</li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
 
+<!-- TESTIMONIAL PLACEHOLDER
+     Replace this comment with a second testimonial when available.
+     Preferred: corporate or team context (different from Jeff Ive's solo pitch story).
+     Format to match the existing Jeff Ive testimonial block above.
+-->
+
 <!-- Contact CTA -->
-<?php include __DIR__ . '/../../app/views/partials/cta-contact.php'; ?>
+<div class="content-card container">
+    <div class="text-content" style="text-align: center;">
+        <h2>For teams and bespoke sessions</h2>
+        <p>The 1-day workshop is for individuals and small groups. For larger teams, bespoke programmes, or ongoing coaching, let's talk about what you need.</p>
+        <p>
+            <a href="https://tidycal.com/freedjack/book-a-call" class="cta-button" rel="noopener noreferrer" target="_blank">Book a call</a>
+        </p>
+        <p>
+            <a href="/contact" class="text-link">Prefer to send a message? Contact us</a>
+        </p>
+    </div>
+</div>
 
 <?php include __DIR__ . '/../../app/views/partials/footer.php'; ?>

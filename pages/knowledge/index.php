@@ -33,6 +33,13 @@ include __DIR__ . '/../../app/views/partials/hero.php';
             <p><strong>Key Topics:</strong> Role play, immersive training, skill development, team building</p>
             <a href="/knowledge/benefits-of-role-play" class="cta-button">Read Article</a>
         </div>
+
+        <div class="content-card">
+            <h2><a href="/knowledge/the-playbook">The Behavioral Playbook</a></h2>
+            <p>Books, podcasts, and research behind our methodology—behavioral science, stress and play, and high-stakes communication.</p>
+            <p><strong>Key Topics:</strong> Behavioral economics, neuroplasticity, negotiation, learning science</p>
+            <a href="/knowledge/the-playbook" class="cta-button">Explore the playbook</a>
+        </div>
   
     </div>
 </div>

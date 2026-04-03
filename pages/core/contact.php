@@ -85,9 +85,17 @@ include __DIR__ . '/../../app/views/partials/hero.php';
             <h2>Contact Information</h2>
             <div class="contact-info">
                 <div class="contact-item">
+                    <p>
+                        <a href="https://tidycal.com/freedjack/book-a-call" class="cta-button" rel="noopener noreferrer" target="_blank">Book a call</a>
+                    </p>
+                </div>
+                <div class="contact-item">
                     <h3>Email</h3>
                     <p>
-                        <a href="#" id="email-link" class="email-obfuscated" data-email="hello@theseriousgamescompany.com">Click to reveal email address</a>
+                        <span id="email-reveal-row" class="contact-email-row">
+                            <a href="#" id="email-link" class="email-obfuscated" data-email="hello@theseriousgamescompany.com">Click to reveal email address</a>
+                        </span>
+                        <span id="email-copy-status" class="sr-only" aria-live="polite"></span>
                         <noscript>
                             <br><small>Email: <span class="rot13">uryyb@gurfrevfntrfpbzrpbz.pbz</span></small>
                         </noscript>
@@ -116,6 +124,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    function copyTextToClipboard(text) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            return navigator.clipboard.writeText(text);
+        }
+        return new Promise(function(resolve, reject) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.setAttribute('readonly', '');
+            ta.style.position = 'fixed';
+            ta.style.left = '-9999px';
+            document.body.appendChild(ta);
+            ta.select();
+            try {
+                if (document.execCommand('copy')) {
+                    resolve();
+                } else {
+                    reject(new Error('copy failed'));
+                }
+            } catch (err) {
+                reject(err);
+            } finally {
+                document.body.removeChild(ta);
+            }
+        });
+    }
+
     // Email obfuscation functionality
     function setupEmailObfuscation() {
         // Handle clickable email links
@@ -128,6 +162,34 @@ document.addEventListener('DOMContentLoaded', function() {
                     this.textContent = email;
                     this.href = 'mailto:' + email;
                     this.classList.add('revealed');
+                    const row = document.getElementById('email-reveal-row');
+                    const statusEl = document.getElementById('email-copy-status');
+                    if (row && !row.querySelector('.copy-email-btn')) {
+                        const btn = document.createElement('button');
+                        btn.type = 'button';
+                        btn.className = 'copy-email-btn';
+                        btn.textContent = 'Copy';
+                        btn.setAttribute('aria-label', 'Copy email address to clipboard');
+                        btn.addEventListener('click', function() {
+                            copyTextToClipboard(email).then(function() {
+                                btn.textContent = 'Copied';
+                                if (statusEl) {
+                                    statusEl.textContent = 'Email copied to clipboard';
+                                }
+                                window.setTimeout(function() {
+                                    btn.textContent = 'Copy';
+                                    if (statusEl) {
+                                        statusEl.textContent = '';
+                                    }
+                                }, 2500);
+                            }).catch(function() {
+                                if (statusEl) {
+                                    statusEl.textContent = 'Could not copy — select the address and copy manually';
+                                }
+                            });
+                        });
+                        row.appendChild(btn);
+                    }
                 }
             });
         });
