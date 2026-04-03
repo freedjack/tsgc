@@ -1,7 +1,7 @@
 <?php
 $page_title = 'The Behavioral Playbook';
 $page_description = 'Curated books, podcasts, and research behind The Serious Games Company: behavioral economics, neurobiology of play and stress, and high-stakes communication—your operating manual for the human mind.';
-$page_keywords = 'behavioral economics, neuroplasticity, serious games, immersive training, Huberman Lab, negotiation training, Yerkes-Dodson, Kahneman, learning science';
+$page_keywords = 'behavioral economics, neuroplasticity, serious games, immersive training, Think Fast Talk Smart, negotiation training, Yerkes-Dodson, Kahneman, learning science';
 
 $article = [
     'headline' => $page_title,
@@ -48,9 +48,13 @@ include __DIR__ . '/../../app/views/partials/hero.php';
                 <p class="playbook-card__author">Katy Milkman</p>
                 <p class="playbook-card__why"><strong>Why we use this:</strong> High-production stories about behavioural economics and irrational choices help us ground scenarios in how people actually decide under ambiguity—the same friction we recreate in the room.</p>
             </article>
-                <h3 class="playbook-card__title"><a href="https://www.hubermanlab.com/" target="_blank" rel="noopener noreferrer">Huberman Lab — The Power of Play</a></h3>
-                <p class="playbook-card__author">Andrew Huberman</p>
-                <p class="playbook-card__why"><strong>Why we use this:</strong> It explains play as a biological lever for neuroplasticity and cognitive flexibility—the same mechanism we lean on when the Chaos Simulator pushes teams to rehearse without a script.</p>
+            <article class="content-card playbook-card">
+                <div class="playbook-card__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+                </div>
+                <h3 class="playbook-card__title"><a href="https://www.fastersmarter.io/" target="_blank" rel="noopener noreferrer">Think Fast, Talk Smart</a></h3>
+                <p class="playbook-card__author">Matt Abrahams (Stanford Graduate School of Business)</p>
+                <p class="playbook-card__why"><strong>Why we use this:</strong> It is built around strategic communication when you are put on the spot—clarity, anxiety, and speaking without a script—which lines up with how we coach people inside the Chaos Simulator and rehearsal.</p>
             </article>
             <article class="content-card playbook-card">
                 <div class="playbook-card__icon" aria-hidden="true">
