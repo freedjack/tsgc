@@ -42,6 +42,9 @@
         </div>
     </footer>
     
+    <!-- PWA manifest at end of document so it does not compete with first-paint resources -->
+    <link rel="manifest" href="/favicon/site.webmanifest">
+
     <!-- JavaScript -->
     <script src="/assets/js/main.js?v=<?php echo $jsVer; ?>" defer></script>
     

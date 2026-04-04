@@ -597,9 +597,19 @@ p {
 /* Service Grid & Cards (Modern Layout) */
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: 1fr;
   gap: 2rem;
   padding: 40px 0;
+}
+
+@media (min-width: 968px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .last-item {
+    grid-column: 1 / -1;
+  }
 }
 
 .service-card {
@@ -652,7 +662,7 @@ p {
   font-size: 0.7rem;
   font-weight: 800;
   padding: 4px 12px;
-  border-radius: 20px;
+  border-radius: 5px;
   display: inline-block;
   margin-bottom: 1rem;
   align-self: flex-start;
@@ -960,29 +970,120 @@ p {
 
 /* Trust bar */
 .trust-bar-section {
-  padding: 2rem 0;
+  background: var(--bg-secondary);
   border-bottom: 1px solid var(--border-color);
 }
 
-.trust-bar-content {
-  text-align: center;
+.trust-bar-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem 1.75rem;
+  padding: 1.25rem 0;
 }
 
-.trust-badge {
-  display: inline-block;
-  background: var(--accent-color);
-  color: var(--bg-primary);
-  padding: 0.5rem 1rem;
+.trust-bar-kicker {
+  margin: 0;
+}
+
+.trust-bar-logos {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 1.25rem 1.75rem;
+}
+
+.trust-bar-logo-link {
+  display: inline-flex;
+  line-height: 0;
   border-radius: 4px;
+  transition: opacity var(--transition-fast);
+}
+
+.trust-bar-logo-link:hover {
+  opacity: 0.85;
+}
+
+.trust-bar-logo-link:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 4px;
+}
+
+.trust-bar-logo-link--hyphen {
+  background: #1d2229;
+  padding: 0.65rem 1.1rem;
+  border-radius: 8px;
+}
+
+.trust-bar-logo-link--hyphen:focus-visible {
+  outline-color: #ffffff;
+}
+
+.trust-bar-logo-link svg,
+.trust-bar-logo-link .trust-bar-logo {
+  display: block;
+  width: auto;
+  height: 38px;
+  max-width: min(220px, 42vw);
+}
+
+.trust-bar-logo-link--hyphen .trust-bar-logo {
+  max-width: min(200px, 38vw);
+  height: 36px;
+}
+
+.trust-bar-lede {
+  margin: 0;
+  max-width: 32rem;
+  font-size: 1.05rem;
+  line-height: 1.45;
+  color: var(--text-primary);
+  text-wrap: balance;
+}
+
+.trust-bar-lede strong {
+  color: var(--primary-color);
   font-weight: 700;
-  margin-bottom: 1rem;
 }
 
 .trust-bar-text {
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.12em;
   color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+  .trust-bar-inner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 0;
+  }
+
+  .trust-bar-logos {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .trust-bar-logo-link svg,
+  .trust-bar-logo-link .trust-bar-logo {
+    height: 32px;
+    max-width: min(200px, 40vw);
+  }
+
+  .trust-bar-logo-link--hyphen .trust-bar-logo {
+    height: 30px;
+    max-width: min(160px, 36vw);
+  }
+
+  .trust-bar-logo-link--hyphen {
+    padding: 0.5rem 0.85rem;
+  }
+
+  .trust-bar-lede {
+    font-size: 1rem;
+  }
 }
 
 /* Forms */
@@ -1078,6 +1179,11 @@ p {
   color: var(--accent-color);
 }
 
+.contact-item a.cta-button,
+.contact-item a.cta-button:hover {
+  color: var(--text-inverse);
+}
+
 /* Email obfuscation */
 .email-obfuscated {
   cursor: pointer;
@@ -1092,6 +1198,22 @@ p {
 .email-obfuscated.revealed {
   color: var(--text-primary);
   cursor: default;
+  user-select: text;
+}
+
+.contact-email-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  row-gap: 0.35rem;
+}
+
+.copy-email-btn {
+  margin: 0;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 .email-obfuscated-text {
@@ -1200,9 +1322,6 @@ p {
 /* Media Queries */
 /* Large Desktop - Up to 1300px */
 @media (max-width: 1300px) {
-  .last-item {
-    grid-column: 1 / -1;
-  }
   .w-50-100 {
     width: 50%;
   }

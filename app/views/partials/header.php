@@ -38,30 +38,31 @@ $canonical_url = isset($canonical_url) ? $canonical_url : rtrim(SITE_URL, '/') .
     <meta name="theme-color" content="#ffffff">
 
     <?php
-    $cssPath = __DIR__ . '/../../../assets/css/style.css';
-    $jsPath  = __DIR__ . '/../../../assets/js/main.js';
-    $cssVer  = file_exists($cssPath) ? filemtime($cssPath) : '';
-    $jsVer   = file_exists($jsPath)  ? filemtime($jsPath)  : '';
+    $cssPath   = __DIR__ . '/../../../assets/css/style.css';
+    $fontsPath = __DIR__ . '/../../../assets/css/fonts.css';
+    $jsPath    = __DIR__ . '/../../../assets/js/main.js';
+    $cssVer    = file_exists($cssPath) ? filemtime($cssPath) : '';
+    $fontsVer  = file_exists($fontsPath) ? filemtime($fontsPath) : '';
+    $jsVer     = file_exists($jsPath) ? filemtime($jsPath) : '';
     ?>
 
     <!-- Critical CSS: inlined to avoid render-blocking network request -->
     <style><?php readfile(__DIR__ . '/../../../assets/css/critical.css'); ?></style>
 
+    <!-- Self-hosted fonts: preload + small stylesheet (avoids Google Fonts critical chain) -->
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/css/fonts.css?v=<?php echo $fontsVer; ?>">
+
     <!-- Full stylesheet: preloaded then swapped to non-blocking -->
     <link rel="preload" href="/assets/css/style.css?v=<?php echo $cssVer; ?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/assets/css/style.css?v=<?php echo $cssVer; ?>"></noscript>
-
-    <!-- Preconnect to Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
 
     <!-- Preload hero image if set by the page -->
     <?php if (isset($hero_image)): ?>

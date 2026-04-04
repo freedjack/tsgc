@@ -16,7 +16,7 @@
            target="_blank"
            rel="noopener noreferrer"
            aria-label="Hyphen - A boutique experiential and live events agency that creates moments which connect brands with people (opens in new window)">
-            <img src="https://www.wearehyphen.co.uk/hubfs/raw_assets/public/WeAreHyphen_February2023/images/logo.svg" width="220" height="41" class="trust-bar-logo" alt="Hyphen">
+            <img src="/assets/images/trust-hyphen-logo.svg" width="220" height="41" class="trust-bar-logo" alt="Hyphen">
         </a>
         </div>
         <p class="trust-bar-lede"><strong>10+ years</strong> of immersive theatre and live scenarios—the rehearsal your team needs for the moment counts.</p>

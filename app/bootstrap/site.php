@@ -10,7 +10,7 @@ if (!defined('SITE_DESCRIPTION')) {
 
 // Analytics and Forms
 if (!defined('GA4_MEASUREMENT_ID')) {
-    define('GA4_MEASUREMENT_ID', ''); // Add your GA4 Measurement ID here
+    define('GA4_MEASUREMENT_ID', 'G-KXYKCXQQBJ'); // Add your GA4 Measurement ID here
 }
 
 if (!defined('WEB3FORMS_ACCESS_KEY')) {
