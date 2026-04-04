@@ -38,21 +38,21 @@ $canonical_url = isset($canonical_url) ? $canonical_url : rtrim(SITE_URL, '/') .
     <meta name="theme-color" content="#ffffff">
 
     <?php
-    $cssPath   = __DIR__ . '/../../../assets/css/style.css';
-    $fontsPath = __DIR__ . '/../../../assets/css/fonts.css';
-    $jsPath    = __DIR__ . '/../../../assets/js/main.js';
-    $cssVer    = file_exists($cssPath) ? filemtime($cssPath) : '';
-    $fontsVer  = file_exists($fontsPath) ? filemtime($fontsPath) : '';
-    $jsVer     = file_exists($jsPath) ? filemtime($jsPath) : '';
+    $cssPath = __DIR__ . '/../../../assets/css/style.css';
+    $jsPath  = __DIR__ . '/../../../assets/js/main.js';
+    $cssVer  = file_exists($cssPath) ? filemtime($cssPath) : '';
+    $jsVer   = file_exists($jsPath) ? filemtime($jsPath) : '';
     ?>
 
-    <!-- Critical CSS: inlined to avoid render-blocking network request -->
-    <style><?php readfile(__DIR__ . '/../../../assets/css/critical.css'); ?></style>
+    <!-- Critical CSS + @font-face inlined (no extra render-blocking stylesheet for fonts) -->
+    <style><?php
+        readfile(__DIR__ . '/../../../assets/css/critical.css');
+        readfile(__DIR__ . '/../../../assets/css/fonts.css');
+    ?></style>
 
-    <!-- Self-hosted fonts: preload + small stylesheet (avoids Google Fonts critical chain) -->
+    <!-- Self-hosted fonts: preload woff2 (starts early; faces defined in inline CSS above) -->
     <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/assets/css/fonts.css?v=<?php echo $fontsVer; ?>">
 
     <!-- Full stylesheet: preloaded then swapped to non-blocking -->
     <link rel="preload" href="/assets/css/style.css?v=<?php echo $cssVer; ?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
