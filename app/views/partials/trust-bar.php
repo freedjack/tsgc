@@ -19,6 +19,6 @@
             <img src="/assets/images/trust-hyphen-logo.svg" width="220" height="41" class="trust-bar-logo" alt="Hyphen">
         </a>
         </div>
-        <p class="trust-bar-lede"><strong>10+ years</strong> of immersive theatre and live scenarios—the rehearsal your team needs for the moment counts.</p>
+        <p class="trust-bar-lede"><strong>10+ years</strong> of immersive theatre and live scenarios—the rehearsal your team needs for the moments that matter.</p>
     </div>
 </section>
