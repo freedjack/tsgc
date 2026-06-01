@@ -14,5 +14,5 @@ if (!defined('GA4_MEASUREMENT_ID')) {
 }
 
 if (!defined('WEB3FORMS_ACCESS_KEY')) {
-    define('WEB3FORMS_ACCESS_KEY', '5c783190-347f-43a3-920e-242362846073'); // Add your Web3Forms access key here
+    define('WEB3FORMS_ACCESS_KEY', 'f18f8a67-2f51-48b7-a1d9-a6447eb6c62e'); // Add your Web3Forms access key here
 }
